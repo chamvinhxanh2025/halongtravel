@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loadScript</title>
+</head>
+<body>
+    <div>
+        <h1>cách 1 dùng defer (khuyên dùng) script sẽ tải sau khi load dom hoàn tất</h1>
+        <code> 
+            &lt;script src=&quot;path_to_file.js&quot; defer&gt;&lt;/script&gt;
+        </code>
+        <h1> cách 2 dùng DOMContentLoaded hoặc window.onload nếu cần chờ Css, ảnh </h1>
+        <pre>            
+            &lt;script&gt;
+                document.addEventListener(&apos;DOMContentLoaded&apos;, () =&gt; {
+                // Code ch&#x1EA1;y sau khi DOM s&#x1EB5;n s&agrave;ng
+                console.log(&apos;DOM loaded&apos;);
+                });
+            &lt;/script&gt;
+        </pre>
+        <h3>cách 3 chèn tự động bằng js</h3>
+        <pre>
+            const script = document.createElement('script');
+            script.src = 'app.js';
+            script.defer = true; // hoặc chờ DOM rồi append
+            document.head.appendChild(script);
+        </pre>
+    </div>
+    
+    
+</body>
+</html>

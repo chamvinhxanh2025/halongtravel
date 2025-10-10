@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll infinite</title>
+    <style>
+        .container {
+            width: 100%
+        }
+    </style>
+    <style>
+        .carousel {
+            position: relative;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px 36px;
+            /* chừa chỗ cho nút điều hướng */
+        }
+
+        .carousel .track {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 12px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x proximity;
+            /* có thể tắt nếu không cần snap */
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior-x: contain;
+        }
+
+        .carousel .item {
+            flex: 0 0 auto;
+            min-width: 220px;
+            height: 120px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background: #eef4ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            scroll-snap-align: start;
+            user-select: none;
+        }
+
+        .carousel .nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 1px solid #aaa;
+            background: #fff;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            opacity: 0.9;
+        }
+
+        .carousel .nav:hover {
+            opacity: 1;
+        }
+
+        .carousel .prev {
+            left: 6px;
+        }
+
+        .carousel .next {
+            right: 6px;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+
+            const carousel = document.getElementById('carousel');
+            const track = document.getElementById('track');
+
+            // Lấy danh sách item "gốc" trước khi clone
+            const originals = Array.from(track.children);
+
+            // Helper: tính tổng chiều rộng ngoài (gồm margin)
+            const outerWidth = (el) => {
+                const rect = el.getBoundingClientRect();
+                const styles = getComputedStyle(el);
+                const marginLeft = parseFloat(styles.marginLeft) || 0;
+                const marginRight = parseFloat(styles.marginRight) || 0;
+                // rect.width đã gồm border+padding; cộng thêm margin
+                return rect.width + marginLeft + marginRight;
+            };
+
+            const originalWidth = originals.reduce((acc, el) => acc + outerWidth(el), 0);
+
+            // Clone lên đầu và cuối để tạo bộ ba: [clone-left][original][clone-right]
+            const leftClones = originals.map(el => el.cloneNode(true));
+            const rightClones = originals.map(el => el.cloneNode(true));
+
+            // Prepend left clones
+            for (let i = leftClones.length - 1; i >= 0; i--) {
+                track.insertBefore(leftClones[i], track.firstChild);
+            }
+            // Append right clones
+            rightClones.forEach(clone => track.appendChild(clone));
+
+            // Sau khi layout xong, đặt scrollLeft ở giữa (ngay sau phần clone bên trái)
+            const initToMiddle = () => {
+                track.scrollLeft = originalWidth; // vì left clones có tổng width = originalWidth
+            };
+            // Đảm bảo tính sau khi browser có layout
+            requestAnimationFrame(initToMiddle);
+            window.addEventListener('resize', () => {
+                // Nếu responsive kích thước thay đổi, nên reset về giữa
+                requestAnimationFrame(initToMiddle);
+            });
+
+            // Wheel: chuyển cuộn dọc -> cuộn ngang
+            track.addEventListener('wheel', (e) => {
+                const isVertical = Math.abs(e.deltaY) > Math.abs(e.deltaX);
+                if (isVertical) {
+                    console.log(track.scrollLeft, e.deltaY)
+                    e.preventDefault();
+                    track.scrollLeft += e.deltaY;
+                }
+            }, { passive: false });
+
+            // “Vô tận”: khi vượt biên, nhảy về vùng giữa tương ứng
+            const leftBound = 0;                    // đầu track
+            const startOriginal = originalWidth;    // sau left clones
+            const endOriginal = originalWidth * 2;  // hết vùng original (trước right clones)
+            const rightBound = track.scrollWidth;   // cuối track
+
+            let ticking = false;
+            const fixInfinite = () => {
+                const x = track.scrollLeft;
+                // Nếu cuộn sang trái vượt vùng original -> nhảy sang phải 1 đoạn originalWidth
+                if (x < startOriginal) {
+                    track.scrollLeft = x + originalWidth;
+                }
+                // Nếu cuộn sang phải vượt vùng original -> nhảy sang trái 1 đoạn originalWidth
+                else if (x > endOriginal) {
+                    track.scrollLeft = x - originalWidth;
+                }
+            };
+
+            track.addEventListener('scroll', () => {
+                // Dùng rAF để tránh xử lý quá nhiều lần
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        fixInfinite();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            // Nút điều hướng
+            const btnPrev = document.getElementById('btnPrev');
+            const btnNext = document.getElementById('btnNext');
+            const step = 240; // khoảng cuộn mỗi lần bấm
+
+            btnPrev.addEventListener('click', () => {
+                track.scrollBy({ left: -step, behavior: 'smooth' });
+            });
+            btnNext.addEventListener('click', () => {
+                track.scrollBy({ left: step, behavior: 'smooth' });
+            });
+
+            // (Tuỳ chọn) Autoplay cuộn nhẹ, dừng khi hover
+            let autoplayTimer = null;
+            const autoplaySpeed = 0.5; // px mỗi tick
+            const startAutoplay = () => {
+                stopAutoplay();
+                autoplayTimer = setInterval(() => {
+                    track.scrollLeft += autoplaySpeed;
+                    // fixInfinite sẽ xử lý biên
+                }, 16); // ~60fps
+            };
+            const stopAutoplay = () => {
+                if (autoplayTimer) clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            };
+
+            // Bật/tắt autoplay tuỳ nhu cầu:
+            // startAutoplay();
+
+            // Dừng khi hover để người dùng thao tác
+            carousel.addEventListener('mouseenter', stopAutoplay);
+            carousel.addEventListener('mouseleave', () => {
+                // startAutoplay(); // bật lại nếu muốn
+            });
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="carousel" id="carousel">
+            <div class="track" id="track">
+                <!-- Ban đầu: chỉ cần đặt các item "gốc" -->
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+                <!-- JS sẽ clone thêm ở cả hai đầu -->
+            </div>
+
+            <!-- (Tuỳ chọn) Nút điều hướng -->
+            <button class="nav prev" id="btnPrev" aria-label="Trước">‹</button>
+            <button class="nav next" id="btnNext" aria-label="Sau">›</button>
+        </div>
+    </div>
+</body>
+
+</html>

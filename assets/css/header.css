@@ -1,0 +1,16 @@
+/* ===== HEADER ===== */
+header .logo img{
+    width: 50px;
+    height: 50px;
+}
+header {
+  position:fixed; top:0; width:100%; padding:8px 0;
+  z-index:1000; transition:all 0.3s ease;
+}
+header .container {display:flex; justify-content:space-between; align-items:center;}
+header .logo {font-size:1.4rem; font-weight:700; color:#fff;}
+header .nav a {margin-left:20px; color:#fff; font-weight:500;}
+header.scrolled {
+  background:rgba(0,76,63,0.95);
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}

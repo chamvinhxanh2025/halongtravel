@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal scroll</title>
+    <style>
+        .container {
+            width: 100%
+        }
+    </style>
+    <style>
+        .scroll-horizontal-list {
+            display: flex;
+            /* Flex row theo mặc định */
+            flex-wrap: nowrap;
+            /* Không xuống dòng */
+            gap: 12px;
+            overflow-x: auto;
+            /* Cho phép cuộn ngang */
+            overflow-y: hidden;
+            padding: 12px;
+            /* scroll-snap-type: x proximity; */
+            scroll-snap-type: x mandatory;
+            /* Tuỳ chọn: hỗ trợ "bám" nhẹ vào item */
+            -webkit-overflow-scrolling: touch;
+            /* Mượt trên iOS */
+            overscroll-behavior-x: contain;
+            /* Tránh giật trang ngoài */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .scroll-horizontal-list .item {
+            flex: 0 0 auto;
+            /* Không co giãn, nằm ngang liên tục */
+            min-width: 200px;
+            /* Kích thước mỗi item */
+            height: 120px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background: #f7f7f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+            /* Tuỳ chọn: bám theo mép đầu */
+            user-select: none;
+        }
+
+        /* (Tuỳ chọn) Ẩn thanh cuộn ngang, vẫn cuộn bằng bánh xe */
+        .scroll-horizontal-list::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .scroll-horizontal-list::-webkit-scrollbar-thumb {
+            background: #bbb;
+            border-radius: 4px;
+        }
+
+        .scroll-horizontal-list:hover::-webkit-scrollbar-thumb {
+            background: #999;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('scrollList');
+
+            container.addEventListener('wheel', (e) => {
+                // Nếu người dùng cuộn dọc (deltaY), ta chuyển thành cuộn ngang.
+                // Trackpad vẫn hỗ trợ deltaX tự nhiên.
+                const isVerticalScroll = Math.abs(e.deltaY) > Math.abs(e.deltaX);
+                if (isVerticalScroll) {
+                    e.preventDefault(); // Chặn cuộn dọc của trang
+                    container.scrollLeft += e.deltaY; // Đẩy sang phải/trái dựa vào bánh xe
+                }
+                // Nếu trackpad đang deltaX nhiều hơn deltaY, để mặc định (cuộn ngang tự nhiên).
+            }, { passive: false });
+
+            // (Tuỳ chọn) Điều hướng bằng phím: trái/phải
+            container.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') container.scrollLeft += 100;
+                if (e.key === 'ArrowLeft') container.scrollLeft -= 100;
+            });
+            container.setAttribute('tabindex', '0'); // Cho phép nhận focus để dùng phím
+        })
+    </script>
+</head>
+
+<body>
+    <h1>scroll</h1>
+    <div class="container">
+        <div class="scroll-horizontal-list" id="scrollList">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 5</div>
+            <!-- ... -->
+        </div>
+
+    </div>
+
+</body>
+
+</html>
