@@ -1,0 +1,90 @@
+ /* CSS cho Nút Hotline */
+ .hotline-button {
+     position: fixed;
+     /* Giữ nút cố định khi cuộn trang */
+     bottom: 30px;
+     left: 30px;
+     z-index: 1001;
+     /* Đảm bảo nút nổi lên trên các phần tử khác */
+
+     display: flex;
+     align-items: center;
+
+     background-color: #0d5a51;
+     /* Màu nền chính */
+     color: white;
+     padding: 8px 20px 8px 8px;
+     /* Padding không đối xứng */
+     border-radius: 50px;
+     /* Bo tròn để tạo hình con nhộng */
+
+     text-decoration: none;
+     font-family: Arial, sans-serif;
+     font-size: 16px;
+     font-weight: bold;
+
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+     cursor: grab;
+     /* Con trỏ hình bàn tay để báo hiệu có thể kéo */
+     transition: box-shadow 0.2s;
+     user-select: none;
+     /* Ngăn chọn văn bản khi kéo */
+ }
+
+ .hotline-button:active {
+     cursor: grabbing;
+     /* Đổi con trỏ khi đang nhấn giữ */
+     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+ }
+
+ .hotline-icon-wrapper {
+     width: 45px;
+     height: 45px;
+     background-color: #0d5a51;
+     /* Cùng màu nền */
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-right: 10px;
+     position: relative;
+ }
+
+ /* Hiệu ứng vòng tròn lan tỏa */
+ .hotline-icon-wrapper::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     border: 2px solid #40edd9;
+     border-radius: 50%;
+     animation: pulse 2s infinite;
+     opacity: 0.7;
+ }
+
+ .hotline-icon {
+     width: 24px;
+     height: 24px;
+     fill: white;
+     /* Màu của icon SVG */
+ }
+
+ /* Định nghĩa animation */
+ @keyframes pulse {
+     0% {
+         transform: scale(0.9);
+         opacity: 0.7;
+     }
+
+     70% {
+         transform: scale(2);
+         opacity: 0;
+     }
+
+     100% {
+         transform: scale(0.9);
+         opacity: 0;
+     }
+ }

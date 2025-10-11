@@ -1,0 +1,158 @@
+  /* ---- Tour List Container ---- */
+  .tours {
+    padding-top:80px;
+            max-width: 1400px;
+
+  }
+   .tours .label {
+    text-align: center;
+   }
+        .tour-list-container {
+            display: grid;
+            /* Tạo các cột có chiều rộng tối thiểu 340px, tự động lấp đầy không gian */
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 30px; /* Khoảng cách giữa các thẻ */
+            padding: 40px;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        /* ---- Tour Card Styling ---- */
+        .tour-card {
+            background-color: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            overflow: hidden; /* Đảm bảo hình ảnh cũng được bo góc */
+            display: flex;
+            flex-direction: column; /* Sắp xếp nội dung theo chiều dọc */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .tour-card img {
+          padding: 10px;
+          border-radius: 23px;
+        }
+        .tour-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+        }
+
+        .tour-card-image {
+            width: 100%;
+            /* Tỷ lệ khung hình 16:10 */
+            aspect-ratio: 16 / 10;
+            object-fit: cover; /* Cắt ảnh vừa vặn, không làm méo */
+        }
+
+        .tour-card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; /* Giúp content chiếm hết không gian còn lại */
+        }
+
+        .tour-title {
+            font-size: 1.25rem; /* 20px */
+            font-weight: 600;
+            margin: 0 0 15px 0;
+            color: var(--text-color-dark);
+        }
+
+        /* ---- Meta Info (Location, Cabins, Stars) ---- */
+        .tour-meta {
+            display: flex;
+            justify-content: space-between; /* Đẩy các item ra hai bên */
+            align-items: center;
+            font-size: 0.875rem; /* 14px */
+            color: var(--text-color-light);
+            margin-bottom: 15px;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .meta-item svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 6px;
+            fill: currentColor;
+        }
+        
+        .tour-specs {
+            display: flex;
+            align-items: center;
+            gap: 12px; /* Khoảng cách giữa số cabin và sao */
+        }
+        
+        .star-rating {
+            display: flex;
+            color: var(--star-color);
+        }
+
+        .star-rating svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .tour-description {
+            font-size: 0.9375rem; /* 15px */
+            line-height: 1.6;
+            color: var(--text-color-light);
+            /* Giới hạn hiển thị 3 dòng và thêm dấu ... */
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 20px;
+        }
+
+  /* ---- Tour Card Footer (Price and Button) ---- */
+        .tour-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto; /* Đẩy footer xuống dưới cùng */
+            padding-top: 15px; /* Khoảng cách với mô tả */
+        }
+        
+        .tour-price {
+            font-size: 0.9rem;
+            color: var(--text-color-light);
+        }
+
+        .tour-price strong {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-color-dark);
+            margin-right: 4px;
+        }
+
+        /* ---- Detail Button ---- */
+        .detail-button {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .detail-button:hover {
+            background-color: #084a42;
+        }
+
+
+        /* ---- Responsive for mobile ---- */
+        @media (max-width: 768px) {
+            .tour-list-container {
+                padding: 20px;
+                gap: 20px;
+                 /* Trên mobile, chỉ hiển thị 1 cột */
+                grid-template-columns: 1fr;
+            }
+        }

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Chạm Vịnh Xanh - Tour du thuyền Hạ Long, trải nghiệm nghỉ dưỡng đẳng cấp giữa kỳ quan thiên nhiên thế giới.">
+  <title>Cham Vịnh Xanh | Tour Du Lịch Hạ Long</title>
+
+  <!-- SEO META -->
+  <meta property="og:title" content="Cham Vịnh Xanh - Du Lịch vịnh Hạ Long" />
+  <meta property="og:description" content="Trải nghiệm Tour Du Thuyền Hạ Long sang trọng cùng Cham Vịnh Xanh" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/logo.jpg" />
+  <meta property="og:phone-number" content="0582625538" />
+  <meta property="og:owner" content="itmrhoang@gmail.com" />
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <link rel="stylesheet" href="backtotop.css">
+  <script src="backtotop.js"></script>
+  <!-- hotline -->
+  <link rel="stylesheet" href="assets/css/hotline.css">
+  <script src="assets/js/hotline.js" defer></script>
+<style>
+          /* ---- General Styling ---- */
+        :root {
+            --primary-text-color: #333;
+            --secondary-text-color: #666;
+            --background-color: #f8f9fa;
+            --card-bg-color: #ffffff;
+            --card-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            --border-radius: 15px;
+            
+            --package-economy: #2980b9;
+            --package-experience: #e67e22;
+            --package-luxury: #8e44ad;
+        }
+  /* ---- Main Container ---- */
+        .packages-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* ---- Header ---- */
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .main-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--secondary-text-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+
+        /* ---- Packages Grid Layout ---- */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        /* ---- Package Card ---- */
+        .package-card {
+            background-color: var(--card-bg-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .card-header {
+            padding: 30px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .package-icon {
+            margin: 0 auto 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .package-icon svg { width: 30px; height: 30px; }
+        
+        .package-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0 0 5px 0;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        .package-subtitle {
+            font-size: 0.9rem;
+            color: var(--secondary-text-color);
+            font-style: italic;
+            margin: 0;
+        }
+        
+        .card-body {
+            padding: 25px 30px;
+            flex-grow: 1;
+        }
+
+        .section-title {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--secondary-text-color);
+            margin-bottom: 8px;
+        }
+
+        .audience-tag {
+            background-color: #eaf3f9;
+            color: #34495e;
+            padding: 5px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .features-list li {
+            color: #898866;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .features-list svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .card-footer {
+            padding: 30px;
+            margin-top: auto;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        /* Package-specific Colors */
+        #economy .package-icon, #economy .cta-button { background-color: var(--package-economy); }
+        #economy .features-list svg { color: var(--package-economy); }
+        
+        #experience .package-icon, #experience .cta-button { background-color: var(--package-experience); }
+        #experience .features-list svg { color: var(--package-experience); }
+
+        #luxury .package-icon, #luxury .cta-button { background-color: var(--package-luxury); }
+        #luxury .features-list svg { color: var(--package-luxury); }
+        
+        #experience {
+            border: 2px solid var(--package-experience);
+        }
+        #experience:hover {
+             transform: scale(1.03) translateY(-10px);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 15px;
+            right: -40px;
+            background-color: var(--package-experience);
+            color: white;
+            padding: 5px 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transform: rotate(45deg);
+        }
+        .experience-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+        }
+        .experience-wrapper .package-card {
+          height: 100%;
+        }
+
+        /* --- Modal Styles --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        .modal-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: scale(0.9);
+            transition: transform 0.3s;
+        }
+        .modal-overlay.show .modal-content {
+            transform: scale(1);
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .modal-title {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .close-button {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #aaa;
+        }
+        .modal-body textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        .modal-body button {
+            width: 100%;
+            padding: 12px;
+        }
+        
+      
+
+
+</style>
+</head>
+
+<body>
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header id="header">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/image/logo-rmbg.png" alt="Chạm Vịnh Xanh">
+        <a href="/">Chạm Vịnh Xanh</a>
+      </div>
+      <nav class="nav">
+        <a href="/">Trang chủ</a>
+        <a href="/#tours">Du thuyền Hạ Long</a>
+        <a href="huongdan.html">Hướng dẫn đặt tour</a>
+        <a href="lienhe.html">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+
+ <div class="packages-container">
+     <div class="breadcrumb">
+        Trang <span>»</span> Ưu đãi
+    </div>
+        <div class="page-header">
+            <h1 class="main-title">Ưu đãi dành cho bạn</h1>
+            <p class="intro-text">Chúng tôi đã thiết kế các gói dịch vụ đa dạng, phù hợp với mọi nhu cầu để mang đến cho bạn một kỳ nghỉ trọn vẹn tại Vịnh Hạ Long.</p>
+        </div>
+
+        <div class="packages-grid">
+            <!-- Economy Package -->
+            <div class="package-card" id="economy">
+                <div class="card-header">
+                    <div class="package-icon"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M14.5,12H19.5V14.5H14.5V12M4.5,12H9.5V14.5H4.5V12M14.5,6H19.5V8.5H14.5V6M4.5,6H9.5V8.5H4.5V6M21,2H3A2,2 0 0,0 1,4V20A2,2 0 0,0 3,22H21A2,2 0 0,0 23,20V4A2,2 0 0,0 21,2Z"/></svg></div>
+                    <h2 class="package-title">Gói Tiết Kiệm</h2>
+                    <p class="package-subtitle">“Khám phá Hạ Long dễ dàng”</p>
+                </div>
+                <div class="card-body">
+                    <p class="section-title">Phù hợp:</p>
+                    <span class="audience-tag">Khách nội địa, nhóm bạn, sinh viên</span>
+                    <p class="section-title">Ưu đãi nổi bật:</p>
+                    <ul class="features-list">
+                        <li><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>Giảm 15% cho khách đặt trước 30 ngày.</li>
+                        <li><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>Tặng bữa trưa hải sản hoặc chèo kayak miễn phí.</li>
+                        <li><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>Giảm 50% phí xe đưa đón Hà Nội – Hạ Long.</li>
+                        <li><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>Miễn phí check-in ảnh tại boong tàu.</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="cta-button">Chọn Gói Này</a>
+                </div>
+            </div>
+
+            <!-- Experience Package (Most Popular) -->
+            <div class="experience-wrapper">
+                 <div class="popular-badge">PHỔ BIẾN</div>
+                 <div class="package-card" id="experience">
+                    <div class="card-header">
+                        <div class="package-icon"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M22,17H20V12H4V17H2V11L11,3.07L12,2L13,3.07L22,11V17M18,17V15H16V17H18M10,14A2,2 0 0,1 12,12A2,2 0 0,1 14,14V17H10V14Z"/></svg></div>
+                        <h2 class="package-title">Gói Trải Nghiệm</h2>
+                        <p class="package-subtitle">“Hạ Long – Trọn vị biển trời”</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="section-title">Phù hợp:</p>
+                        <span class="audience-tag">Gia đình, cặp đôi, du lịch tự túc</span>
+                        <p class="section-title">Ưu đãi nổi bật:</p>
+                        <ul class="features-list">
+                            <li><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>Giảm 20% du thuyền 2N1Đ khi đặt trong tuần.</li>
+                            <li><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>Miễn phí lớp nấu ăn & yoga bình minh.</li>
+                            <li><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>Tặng 01 bộ ảnh chuyên nghiệp 5 tấm.</li>
+                            <li><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>Miễn phí set BBQ hải sản buổi tối.</li>
+                            <li><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>Nâng cấp phòng view vịnh (nếu còn trống).</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="cta-button">Chọn Gói Này</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luxury Package -->
+            <div class="package-card" id="luxury">
+                <div class="card-header">
+                    <div class="package-icon"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z"/></svg></div>
+                    <h2 class="package-title">Gói Sang Trọng</h2>
+                    <p class="package-subtitle">“Luxury Cruise – Kỳ quan cho riêng bạn”</p>
+                </div>
+                <div class="card-body">
+                    <p class="section-title">Phù hợp:</p>
+                    <span class="audience-tag">Cặp đôi, khách quốc tế, trải nghiệm cao cấp</span>
+                    <p class="section-title">Ưu đãi nổi bật:</p>
+                    <ul class="features-list">
+                         <li><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>Giảm 10% cho phòng suite hoặc honeymoon cabin.</li>
+                         <li><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>Tặng rượu vang, trang trí hoa hồng, bánh ngọt.</li>
+                         <li><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>Miễn phí xe limousine 2 chiều Hà Nội – Hạ Long.</li>
+                         <li><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>Dịch vụ check-in VIP + set trà chiều trên boong.</li>
+                         <li><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>Ưu tiên late check-out miễn phí (đến 13h).</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="cta-button">Chọn Gói Này</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>Cham Vịnh Xanh</h3>
+        <div class="logo"><img src="assets/image/logo.png" alt="Chạm Vịnh Xanh"></div>
+      </div>
+      <div>
+        <h4>Hoạt động</h4>
+        <ul>
+          <li><a href="/#tours">Tour Du Thuyền</a></li>
+         <li><a href="uudai.html">Ưu Đãi</a></li>
+        </ul>
+      </div>
+      <div style=" grid-column: 3 / span 2;">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="chinhsach.html">Chính sách hoàn tiền</a></li>
+         <li><a href="thanhtoan.html">Xác thực & thanh toán</a></li>
+          <li><a href="lienhe.html">Liên hệ</a></li>
+        </ul>
+        <p>
+          Hotline: 0388 888 888<br />
+          Email: info@chamvinhxanh.vn<br />
+          Văn Phòng Hà Nội: 31 Phan Đình Giót, Phương Liệt, Thanh Xuân, Hà Nội<br />
+          Văn Phòng Hạ Long: 3/24 Cao Xanh, Tổ 45B, Khu 4A, Đường Trần Phú, Hạ Long, Quảng Ninh
+        </p>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Cham Vịnh Xanh. All rights reserved. itmrhoang®</p>
+  </footer>
+
+  <!-- ===== JS: Header Scroll + Parallax ===== -->
+  <script src="script.js">
+  </script>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+  <a id="draggable-hotline" class="hotline-button" href="tel:0582625538">
+    <div class="hotline-icon-wrapper">
+      <svg class="hotline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.02.74-.25 1.02l-2.2 2.2z" />
+      </svg>
+    </div>
+    <span>Hotline</span>
+  </a>
+  <!-- Nút Lên Đầu Trang -->
+  <button id="backToTop" title="Lên đầu trang">
+    <i class="fa fa-angle-up"></i>
+  </button>
+  <!-- Script điều khiển -->
+  <script src="backtotop.js"></script>
+</body>
+
+</html>

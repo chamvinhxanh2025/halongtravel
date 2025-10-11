@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Kiểu Kính Mờ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+    /* --- Cài đặt chung & Hình nền --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #fff;
+    /* Sử dụng một ảnh nền đẹp để hiệu ứng kính nổi bật */
+    background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2029&auto=format&fit=crop');
+    background-size: cover;
+    background-attachment: fixed; /* Giữ nền cố định khi cuộn */
+    background-position: center;
+}
+
+/* --- PHẦN QUAN TRỌNG NHẤT: STYLING CHO HEADER --- */
+.glass-header {
+    /* 1. Cố định header trên cùng */
+    position: fixed;
+    top: 20px; /* Cách lề trên một chút cho đẹp */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    z-index: 1000;
+
+    /* 2. Dàn layout cho các mục bên trong */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 15px; /* Bo góc */
+
+    /* 3. Hiệu ứng GLASSMORPHISM */
+    background: rgba(255, 255, 255, 0.15); /* Màu nền trắng trong suốt */
+    backdrop-filter: blur(12px); /* Đây là chìa khóa tạo hiệu ứng mờ */
+    -webkit-backdrop-filter: blur(12px); /* Hỗ trợ trình duyệt Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Viền mờ tinh tế */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2); /* Bóng đổ để nâng header lên */
+}
+
+
+/* --- Styling cho các thành phần bên trong header --- */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Khoảng cách giữa các mục menu */
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #ddd;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* --- Styling cho phần nội dung trang --- */
+.content {
+    padding-top: 150px; /* Đẩy nội dung xuống dưới header */
+    padding-bottom: 2000px; /* Tạo khoảng trống để cuộn trang */
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+</style>
+</head>
+<body>
+
+    <header class="glass-header">
+        <a href="#" class="logo">Logo</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <button class="cta-button">Bắt đầu</button>
+    </header>
+
+    <main class="content">
+        <section class="hero">
+            <h1>Header Nổi Kiểu Tấm Kính</h1>
+            <p>Cuộn xuống để thấy hiệu ứng header "nổi" trên nội dung.</p>
+        </section>
+
+        <section>
+            <h2>Nội dung trang web</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, vel tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus.</p>
+        </section>
+    </main>
+
+</body>
+</html>

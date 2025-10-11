@@ -1,16 +1,54 @@
 /* ===== HEADER ===== */
-header .logo img{
-    width: 50px;
-    height: 50px;
+header .logo {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
+header .logo img {
+  width: 50px;
+  height: 50px;
+  transform: scale(2);
+}
+
 header {
-  position:fixed; top:0; width:100%; padding:8px 0;
-  z-index:1000; transition:all 0.3s ease;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 5px 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
-header .container {display:flex; justify-content:space-between; align-items:center;}
-header .logo {font-size:1.4rem; font-weight:700; color:#fff;}
-header .nav a {margin-left:20px; color:#fff; font-weight:500;}
-header.scrolled {
-  background:rgba(0,76,63,0.95);
-  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+
+header .container {
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+header .nav a {
+  margin-left: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+
+header.scrolled .container {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  background: #53bfb533;
+  -webkit-backdrop-filter: blur(12px);
+  /* Hỗ trợ trình duyệt Safari */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  /* Bóng đổ để nâng header lên */
+  padding: 10px 20px;
+  border-radius: 15px;
+  /* Bo góc */
 }

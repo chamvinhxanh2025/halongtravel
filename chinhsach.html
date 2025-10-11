@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Chạm Vịnh Xanh - Tour du thuyền Hạ Long, trải nghiệm nghỉ dưỡng đẳng cấp giữa kỳ quan thiên nhiên thế giới.">
+  <title>Cham Vịnh Xanh | Tour Du Lịch Hạ Long</title>
+
+  <!-- SEO META -->
+  <meta property="og:title" content="Cham Vịnh Xanh - Du Lịch vịnh Hạ Long" />
+  <meta property="og:description" content="Trải nghiệm Tour Du Thuyền Hạ Long sang trọng cùng Cham Vịnh Xanh" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/logo.jpg" />
+  <meta property="og:phone-number" content="0582625538" />
+  <meta property="og:owner" content="itmrhoang@gmail.com" />
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <link rel="stylesheet" href="backtotop.css">
+  <script src="backtotop.js"></script>
+  <!-- hotline -->
+  <link rel="stylesheet" href="assets/css/hotline.css">
+  <script src="assets/js/hotline.js" defer></script>
+  <style>
+      /* ---- Main Container ---- */
+        .policy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* ---- Header ---- */
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--secondary-text-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ---- Policy Grid Layout ---- */
+        .policy-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        /* ---- Policy Card ---- */
+        .policy-card {
+            background-color: #147cbf73;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .policy-card.voucher-policy {
+             border-left-color: #3498db; /* Blue for vouchers */
+        }
+        
+        .policy-card.group-policy {
+            border-left-color: #f39c12; /* Orange for groups */
+        }
+
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            color: white;
+        }
+        
+        .voucher-policy .card-icon { background-color: #3498db; }
+        .group-policy .card-icon { background-color: #f39c12; }
+
+        .card-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* ---- Cancellation List ---- */
+        .cancellation-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .cancellation-list li {
+            display: flex;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+            align-items: center;
+        }
+        
+        .cancellation-list li:last-child {
+            border-bottom: none;
+        }
+
+        .timeline {
+            flex: 1;
+            font-weight: 500;
+            color: var(--primary-text-color);
+        }
+
+        .fee {
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background-color: #eaf3f9;
+            color: black;
+            text-align: right;
+            white-space: nowrap;
+        }
+        
+        .fee-50 { background-color: #fef5e7; color: #f39c12; }
+        .fee-70 { background-color: #f9e79f; color: #b7791f; }
+        .fee-100 { background-color: #f5b7b1; color: #c0392b; }
+        
+        /* General policy list for vouchers */
+        .policy-details {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .policy-details li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+         .policy-details li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 768px) {
+             .main-title { font-size: 2rem; }
+             .card-title { font-size: 1.3rem; }
+             .cancellation-list li { flex-direction: column; align-items: flex-start; gap: 8px; }
+             .fee { width: 100%; text-align: left;}
+        }
+  </style>
+</head>
+
+<body>
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header id="header">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/image/logo-rmbg.png" alt="Chạm Vịnh Xanh">
+        <a href="/">Chạm Vịnh Xanh</a>
+      </div>
+      <nav class="nav">
+        <a href="/">Trang chủ</a>
+        <a href="/#tours">Du thuyền Hạ Long</a>
+        <a href="huongdan.html">Hướng dẫn đặt tour</a>
+        <a href="lienhe.html">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+<div class="policy-container">
+    <div class="breadcrumb">
+        Trang <span>»</span> Chính sách
+    </div>
+        <div class="page-header">
+            <h1 class="main-title">Chính sách hoàn huỷ tour</h1>
+            <p class="intro-text">Áp dụng cho khách hàng đặt dịch vụ với <strong>CÔNG TY TNHH DU LỊCH & THƯƠNG MẠI CHẠM VỊNH XANH</strong>. Tùy vào từng dịch vụ sẽ có chính sách riêng, dưới đây là các chính sách cơ bản.</p>
+        </div>
+
+        <div class="policy-grid">
+            <!-- Voucher Policy Card -->
+            <div class="policy-card voucher-policy">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M4,4A2,2 0 0,0 2,6V10C3.11,10 4,10.9 4,12A1,1 0 0,1 3,13A1,1 0 0,1 4,14C4,15.11 3.1,16 2,16V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4A2,2 0 0,0 20,4H4M10.12,17.45L7.93,15.27L9.34,13.86L10.12,14.65L14.7,10.06L16.12,11.47L10.12,17.45Z"/></svg>
+                    </div>
+                    <h2 class="card-title">Đối với khách hàng mua Voucher</h2>
+                </div>
+                <ul class="policy-details">
+                    <li>Voucher khách sạn, du thuyền, nhà hàng... đã mua sẽ <strong>không thể hoàn, hủy</strong> theo chính sách của các bên cung cấp.</li>
+                    <li>Trường hợp Voucher (bản cứng/mềm) bị thất lạc, hỏng, chúng tôi sẽ hỗ trợ xác minh thông tin với nhà cung cấp.</li>
+                    <li>Trường hợp bất khả kháng (thiên tai, dịch bệnh), Voucher có thể được hoàn lại tùy theo chính sách của từng nhà cung cấp.</li>
+                </ul>
+            </div>
+
+            <!-- Small Group Policy Card -->
+            <div class="policy-card group-policy">
+                <div class="card-header">
+                    <div class="card-icon">
+                         <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/></svg>
+                    </div>
+                    <h2 class="card-title">Đoàn khách đặt dưới 5 phòng</h2>
+                </div>
+                <ul class="cancellation-list">
+                    <li><span class="timeline">Trên 15 ngày trước khởi hành</span> <span class="fee">Không mất phí</span></li>
+                    <li><span class="timeline">Từ 10 - 14 ngày trước khởi hành</span> <span class="fee fee-50">50% tổng tiền</span></li>
+                    <li><span class="timeline">Từ 03 - 09 ngày trước khởi hành</span> <span class="fee fee-70">70% tổng tiền</span></li>
+                    <li><span class="timeline">Trong vòng 03 ngày hoặc không báo</span> <span class="fee fee-100">100% tổng tiền</span></li>
+                </ul>
+            </div>
+            
+             <!-- Large Group Policy Card -->
+            <div class="policy-card group-policy">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M1,21H5V19H1M1,17H5V15H1M1,13H5V11H1M19,21H23V19H19M19,17H23V15H19M19,13H23V11H19M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M7,8V6H5V8H7M7,10H5V12C5,13.11 5.9,14 7,14V12A2,2 0 0,1 5,10H7M17,8H19V6H17V8M17,10V12A2,2 0 0,1 19,10H17M7,18H5V16H7V18M17,18V16H19V18H17Z"/></svg>
+                    </div>
+                    <h2 class="card-title">Đoàn khách đặt từ 5 phòng trở lên</h2>
+                </div>
+                 <ul class="cancellation-list">
+                    <li><span class="timeline">Trên 30 ngày trước khởi hành</span> <span class="fee">Không mất phí</span></li>
+                    <li><span class="timeline">Từ 15 - 29 ngày trước khởi hành</span> <span class="fee fee-50">50% tổng tiền</span></li>
+                    <li><span class="timeline">Từ 07 - 14 ngày trước khởi hành</span> <span class="fee fee-70">70% tổng tiền</span></li>
+                    <li><span class="timeline">Trong vòng 06 ngày hoặc không báo</span> <span class="fee fee-100">100% tổng tiền</span></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>Cham Vịnh Xanh</h3>
+        <div class="logo"><img src="assets/image/logo.png" alt="Chạm Vịnh Xanh"></div>
+      </div>
+      <div>
+        <h4>Hoạt động</h4>
+        <ul>
+          <li><a href="/#tours">Tour Du Thuyền</a></li>
+  <li><a href="uudai.html">Ưu Đãi</a></li>
+        </ul>
+      </div>
+      <div style=" grid-column: 3 / span 2;">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="chinhsach.html">Chính sách hoàn tiền</a></li>
+         <li><a href="thanhtoan.html">Xác thực & thanh toán</a></li>
+          <li><a href="lienhe.html">Liên hệ</a></li>
+        </ul>
+        <p>
+          Hotline: 0388 888 888<br />
+          Email: info@chamvinhxanh.vn<br />
+          Văn Phòng Hà Nội: 31 Phan Đình Giót, Phương Liệt, Thanh Xuân, Hà Nội<br />
+          Văn Phòng Hạ Long: 3/24 Cao Xanh, Tổ 45B, Khu 4A, Đường Trần Phú, Hạ Long, Quảng Ninh
+        </p>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Cham Vịnh Xanh. All rights reserved. itmrhoang®</p>
+  </footer>
+
+  <!-- ===== JS: Header Scroll + Parallax ===== -->
+  <script src="script.js">
+  </script>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+  <a id="draggable-hotline" class="hotline-button" href="tel:0582625538">
+    <div class="hotline-icon-wrapper">
+      <svg class="hotline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.02.74-.25 1.02l-2.2 2.2z" />
+      </svg>
+    </div>
+    <span>Hotline</span>
+  </a>
+  <!-- Nút Lên Đầu Trang -->
+  <button id="backToTop" title="Lên đầu trang">
+    <i class="fa fa-angle-up"></i>
+  </button>
+  <!-- Script điều khiển -->
+  <script src="backtotop.js"></script>
+</body>
+
+</html>

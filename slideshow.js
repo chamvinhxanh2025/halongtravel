@@ -30,7 +30,7 @@ function prevSlide() {
 }
 
 // Auto slide
-let autoPlay = setInterval(nextSlide, 5000);
+// let autoPlay = setInterval(nextSlide, 5000);
 
 // Nút điều hướng
 nextBtn.addEventListener('click', () => {

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Chạm Vịnh Xanh - Tour du thuyền Hạ Long, trải nghiệm nghỉ dưỡng đẳng cấp giữa kỳ quan thiên nhiên thế giới.">
+  <meta name="description"
+    content="Chạm Vịnh Xanh - Tour du thuyền Hạ Long, trải nghiệm nghỉ dưỡng đẳng cấp giữa kỳ quan thiên nhiên thế giới.">
   <title>Cham Vịnh Xanh | Tour Du Lịch Hạ Long</title>
 
   <!-- SEO META -->
@@ -24,114 +26,500 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
+
   <link rel="stylesheet" href="backtotop.css">
   <script src="backtotop.js"></script>
 
   <link rel="stylesheet" href="slideshow.css">
-  <script src="slideshow.js"></script>
-
+  <script src="slideshow.js" defer></script>
+  <!-- hotline -->
+  <link rel="stylesheet" href="assets/css/hotline.css">
+  <script src="assets/js/hotline.js" defer></script>
 </head>
 
 <body>
   <!-- ===== HEADER / NAVBAR ===== -->
   <header id="header">
     <div class="container">
-      <div class="logo"><img src="assets/image/logo.png" alt="Chạm Vịnh Xanh"></div>
+      <div class="logo">
+        <img src="assets/image/logo-rmbg.png" alt="Chạm Vịnh Xanh">
+        <a href="/">Chạm Vịnh Xanh</a>
+      </div>
       <nav class="nav">
-        <a href="#">Trang chủ</a>
-        <a href="#">Du thuyền Hạ Long</a>
-        <a href="#">Ưu đãi</a>
-        <a href="#">Cẩm nang</a>
-        <a href="#">Liên hệ</a>
+        <a href="/">Trang chủ</a>
+        <a href="/#tours">Du thuyền Hạ Long</a>
+         <a href="huongdan.html">Hướng dẫn đặt tour</a>
+        <a href="lienhe.html">Liên hệ</a>
       </nav>
     </div>
   </header>
-
-  <!-- ===== HERO SECTION (PARALLAX) ===== -->
-   <!-- ===== HERO SLIDESHOW ===== -->
-<section class="hero-slider">
-  <div class="slide active" style="background-image: url('assets/images/halong1.jpg');">
-    <div class="hero-content">
-      <h1>Khám phá Vịnh Hạ Long</h1>
-      <p>Trải nghiệm sang trọng cùng Cham Vịnh Xanh</p>
+  <!-- ===== HERO SLIDESHOW ===== -->
+  <section class="hero-slider">
+    <div class="slide active" style="background-image: url('assets/images/bg-slide0.jpg');">
+      <div class="hero-content">
+        <h1>Khám phá Vịnh Hạ Long</h1>
+        <p>Trải nghiệm sang trọng cùng Chạm Vịnh Xanh</p>
+      </div>
     </div>
-  </div>
-  <div class="slide" style="background-image: url('assets/images/halong2.jpg');">
-    <div class="hero-content">
-      <h1>Du thuyền sang trọng 5 sao</h1>
-      <p>Tận hưởng kỳ nghỉ đẳng cấp giữa kỳ quan thiên nhiên</p>
+    <div class="slide" style="background-image: url('assets/images/bg-slide1.jpg');">
+      <div class="hero-content">
+        <h1>Tour đặc sắc tại Hạ Long</h1>
+        <p>Trải nghiệm thực tế cùng các tour du lịch đặc sắc</p>
+      </div>
     </div>
-  </div>
-  <div class="slide" style="background-image: url('assets/images/halong3.jpg');">
-    <div class="hero-content">
-      <h1>Hoàng hôn trên Vịnh</h1>
-      <p>Trải nghiệm đáng nhớ cùng Cham Vịnh Xanh</p>
+    <div class="slide" style="background-image: url('assets/images/bg-du-thuyen.jpg');">
+      <div class="hero-content">
+        <h1>Du thuyền sang trọng 5 sao</h1>
+        <p>Tận hưởng kỳ nghỉ đẳng cấp giữa kỳ quan thiên nhiên</p>
+      </div>
     </div>
-  </div>
-
-  <!-- Nút điều hướng -->
-  <button class="prev">&#10094;</button>
-  <button class="next">&#10095;</button>
-
-  <!-- Chấm tròn điều hướng -->
-  <div class="dots"></div>
-</section>
-
-  <section class="hero" id="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content" data-aos="fade-up">
-      <h1>#1 Tour Du Thuyền Hạ Long</h1>
-      <p>Trải nghiệm sang trọng cùng Cham Vịnh Xanh – lựa chọn hàng đầu cho kỳ nghỉ Hạ Long đáng nhớ.</p>
-      <a href="#" class="btn-primary">Xem Tour Ngay</a>
+    <div class="slide" style="background-image: url('assets/images/bg-slide3.jpg');">
+      <div class="hero-content">
+        <h1>Hoàng hôn trên Vịnh</h1>
+        <p>Trải nghiệm đáng nhớ cùng Chạm Vịnh Xanh</p>
+      </div>
     </div>
+
+    <!-- Nút điều hướng -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+    <!-- Chấm tròn điều hướng -->
+    <div class="dots"></div>
   </section>
 
-  <!-- ===== FEATURES SECTION ===== -->
-  <section class="features container">
-    <div class="feature-box" data-aos="fade-up" data-aos-delay="100">
-      <h3>Đại lý du thuyền lớn nhất</h3>
-      <p>Đối tác chính thức của hơn 30 hãng du thuyền tại Hạ Long.</p>
-    </div>
-    <div class="feature-box" data-aos="fade-up" data-aos-delay="200">
-      <h3>Giải thưởng TripAdvisor 2024</h3>
-      <p>Tự hào là đơn vị được Travelers’ Choice 2024 bình chọn.</p>
-    </div>
-    <div class="feature-box" data-aos="fade-up" data-aos-delay="300">
-      <h3>Tư vấn tận tâm</h3>
-      <p>Đội ngũ chăm sóc 24/7, hỗ trợ suốt hành trình của bạn.</p>
-    </div>
-  </section>
+
 
   <!-- ===== TOURS SECTION ===== -->
-  <section class="tours container">
-    <h2 data-aos="fade-up">Du Thuyền Hạ Long Được Yêu Thích</h2>
-    <div class="tour-grid">
-      <div class="tour-card" data-aos="zoom-in" data-aos-delay="100">
-        <img src="assets/images/tour1.jpg" alt="Du thuyền Almera" />
-        <h3>Du thuyền Almera</h3>
-        <p>Trải nghiệm đẳng cấp 5 sao giữa kỳ quan Hạ Long.</p>
-        <span class="price">9.700.000₫ / cabin</span>
-        <a href="#" class="btn-outline">Chi tiết</a>
-      </div>
-      <div class="tour-card" data-aos="zoom-in" data-aos-delay="200">
-        <img src="assets/images/tour2.jpg" alt="Du thuyền Azure" />
-        <h3>Du thuyền Azure</h3>
-        <p>Khám phá vịnh Lan Hạ cùng Azure Cruise đẳng cấp.</p>
-        <span class="price">3.590.000₫ / khách</span>
-        <a href="#" class="btn-outline">Chi tiết</a>
-      </div>
-      <div class="tour-card" data-aos="zoom-in" data-aos-delay="300">
-        <img src="assets/images/tour3.jpg" alt="Du thuyền L’amour" />
-        <h3>Du thuyền L’amour</h3>
-        <p>Hành trình lãng mạn, ngắm hoàng hôn trên Vịnh.</p>
-        <span class="price">1.580.000₫ / khách</span>
-        <a href="#" class="btn-outline">Chi tiết</a>
-      </div>
+  <section class="tours container" id="tours">
+    <h2 class="label fade-up">Tour Du Thuyền vịnh Hạ Long 2 ngày 1 đêm</h2>
+    <div class="tour-list-container">
+      <!-- Tour Card 1 -->
+      <article class="tour-card" data-aos="zoom-in" data-aos-delay="100">
+        <a href=""><img src="assets/images/tours/dt1.jpg" alt="Du thuyền Aime'e" class="tour-card-image"></a>
+        <div class="tour-card-content">
+          <h2 class="tour-title">Du Thuyền Aime’e – Du thuyền Hạ Long 6* mới nhất 2025</h2>
+          <div class="tour-meta">
+            <div class="meta-item">
+              <!-- Location Icon -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z">
+                </path>
+              </svg>
+              <span>Vịnh Hạ Long</span>
+            </div>
+          </div>
+          <div class="tour-meta">
+            <div class="tour-specs">
+              <div class="meta-item">
+                <!-- Cabin Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 18h-3v-5h-2v5H4v-7h15M4 8h15L12 3L4 8m16 12H3c-.55 0-1-.45-1-1V7c0-.25.1-.5.28-.68l8-6c.35-.26.8-.26 1.15 0l8 6c.18.17.28.43.28.68v12c0 .55-.45 1-1 1Z">
+                  </path>
+                </svg>
+                <span>29 cabins</span>
+              </div>
+              <div class="star-rating">
+                <!-- Star Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="tour-description">
+            Du thuyền AIMEE CRUISE, du thuyền mới nhất từ Công ty tàu Bái Thọ Hạ Long, sẽ chính thức ra mắt vào tháng 11
+            năm 2025, hứa hẹn mang đến trải nghiệm sang trọng trên những vịnh biển tuyệt đẹp của Việt Nam. Với thiết kế
+            hiện đại đầy quyến...
+          </p>
+          <div class="tour-card-footer">
+            <div class="tour-price">
+              <strong>3.000.000 đ</strong> / khách
+            </div>
+            <a href="#" class="detail-button">Chi Tiết</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour Card 2 -->
+      <article class="tour-card" data-aos="zoom-in" data-aos-delay="100">
+        <a href=""><img src="assets/images/tours/dt2.jpg" alt="Du thuyền Azura" class="tour-card-image"></a>
+        <div class="tour-card-content">
+          <h2 class="tour-title">Du thuyền Azura- tàu ngủ đêm khám phá Vịnh Lan Hạ</h2>
+          <div class="tour-meta">
+            <div class="meta-item">
+              <!-- Location Icon -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z">
+                </path>
+              </svg>
+              <span>Vịnh Lan Hạ</span>
+            </div>
+          </div>
+          <div class="tour-meta">
+            <div class="tour-specs">
+              <div class="meta-item">
+                <!-- Cabin Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 18h-3v-5h-2v5H4v-7h15M4 8h15L12 3L4 8m16 12H3c-.55 0-1-.45-1-1V7c0-.25.1-.5.28-.68l8-6c.35-.26.8-.26 1.15 0l8 6c.18.17.28.43.28.68v12c0 .55-.45 1-1 1Z">
+                  </path>
+                </svg>
+                <span>30 cabins cabins</span>
+              </div>
+              <div class="star-rating">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="tour-description">
+            Du thuyền Azura, sản phẩm thế hệ thứ hai của Công ty Cổ phần Dịch vụ Du lịch Đại Dương, đang tạo nên những
+            kỳ vọng lớn lao trong ngành du lịch biển Việt Nam. Sau thành công vượt trội của du thuyền Aspira, Azura hứa
+            hẹn sẽ mang đến...
+          </p>
+          <div class="tour-card-footer">
+            <div class="tour-price">
+              <strong>9.600.000 đ</strong> / Cabin
+            </div>
+            <a href="#" class="detail-button">Chi Tiết</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour Card 3 -->
+      <article class="tour-card" data-aos="zoom-in" data-aos-delay="100">
+        <a href=""> <img src="assets/images/tours/dt3.jpg" alt="Du thuyền Ngủ Đêm L'amour" class="tour-card-image"> </a>
+        <div class="tour-card-content">
+          <h2 class="tour-title">Du thuyền Ngủ Đêm L’amour – Đậm Chất Văn Hóa Việt Nam</h2>
+          <div class="tour-meta">
+            <div class="meta-item">
+              <!-- Location Icon -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z">
+                </path>
+              </svg>
+              <span>Vịnh Hạ Long</span>
+            </div>
+          </div>
+          <div class="tour-meta">
+            <div class="tour-specs">
+              <div class="meta-item">
+                <!-- Cabin Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 18h-3v-5h-2v5H4v-7h15M4 8h15L12 3L4 8m16 12H3c-.55 0-1-.45-1-1V7c0-.25.1-.5.28-.68l8-6c.35-.26.8-.26 1.15 0l8 6c.18.17.28.43.28.68v12c0 .55-.45 1-1 1Z">
+                  </path>
+                </svg>
+                <span>33 Cabins cabins</span>
+              </div>
+              <div class="star-rating">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="tour-description">
+            Với 33 không gian nghỉ dưỡng cao cấp, sang trọng và đẳng cấp, L'amour cam kết mang đến cho du khách những
+            khoảnh khắc khó quên. Mỗi không gian không chỉ là nơi nghỉ ngơi mà còn là một câu chuyện thú vị, gợi nhớ về
+            những giá trị văn...
+          </p>
+          <div class="tour-card-footer">
+            <div class="tour-price">
+              <strong>9.900.000 đ</strong> / Cabin
+            </div>
+            <a href="#" class="detail-button">Chi Tiết</a>
+          </div>
+        </div>
+      </article>
+      <!-- dt4 -->
+      <article class="tour-card" data-aos="zoom-in" data-aos-delay="100">
+        <a href=""><img src="assets/images/tours/dt4.jpg"
+            alt="Du thuyền Hermes – Du thuyền ngủ đêm 5* Khám phá vịnh Hạ Long" class="tour-card-image"></a>
+        <div class="tour-card-content">
+          <h2 class="tour-title">Du thuyền Hermes – Du thuyền ngủ đêm 5* Khám phá vịnh Hạ Long</h2>
+          <div class="tour-meta">
+            <div class="meta-item">
+              <!-- Location Icon -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z">
+                </path>
+              </svg>
+              <span>Cảng Tuần Châu</span>
+            </div>
+          </div>
+          <div class="tour-meta">
+            <div class="tour-specs">
+              <div class="meta-item">
+                <!-- Cabin Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 18h-3v-5h-2v5H4v-7h15M4 8h15L12 3L4 8m16 12H3c-.55 0-1-.45-1-1V7c0-.25.1-.5.28-.68l8-6c.35-.26.8-.26 1.15 0l8 6c.18.17.28.43.28.68v12c0 .55-.45 1-1 1Z">
+                  </path>
+                </svg>
+                <span>18 phòng nghỉ cabins</span>
+              </div>
+              <div class="star-rating">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="tour-description">
+            Du thuyền Hermes - một kiệt tác trên biển, hứa hẹn mang đến cho du khách những trải nghiệm nghỉ dưỡng đẳng
+            cấp bậc nhất tại Vịnh Hạ Long. Với 18 phòng nghỉ sang trọng, được thiết kế tỉ mỉ theo phong cách tân cổ
+            điển, mỗi phòng đều là...
+          </p>
+          <div class="tour-card-footer">
+            <div class="tour-price">
+              <strong>4.250.000đ đ</strong> / khách
+            </div>
+            <a href="#" class="detail-button">Chi Tiết</a>
+          </div>
+        </div>
+      </article>
+      <!-- dt5 -->
+      <article class="tour-card" data-aos="zoom-in" data-aos-delay="100">
+        <a href=""><img src="assets/images/tours/dt5.jpg" alt="Du Thuyền Sea Star 6* – Sang trọng bậc nhất tại Hạ Long"
+            class="tour-card-image"></a>
+        <div class="tour-card-content">
+          <h2 class="tour-title">Du Thuyền Sea Star 6* – Sang trọng bậc nhất tại Hạ Long</h2>
+          <div class="tour-meta">
+            <div class="meta-item">
+              <!-- Location Icon -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z">
+                </path>
+              </svg>
+              <span>Cảng Tuần Châu</span>
+            </div>
+          </div>
+          <div class="tour-meta">
+            <div class="tour-specs">
+              <div class="meta-item">
+                <!-- Cabin Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 18h-3v-5h-2v5H4v-7h15M4 8h15L12 3L4 8m16 12H3c-.55 0-1-.45-1-1V7c0-.25.1-.5.28-.68l8-6c.35-.26.8-.26 1.15 0l8 6c.18.17.28.43.28.68v12c0 .55-.45 1-1 1Z">
+                  </path>
+                </svg>
+                <span>39 Cabins</span>
+              </div>
+              <div class="star-rating">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="tour-description">
+            Du thuyền Sea Star có chiều dài 110m và rộng 16.2m, được thiết kế với tiêu chí mang lại sự thoải mái và tiện
+            nghi tối đa cho du khách. Nội thất bên trong được bài trí tinh tế, kết hợp giữa phong cách hiện đại và nét
+            đẹp truyền…
+          </p>
+          <div class="tour-card-footer">
+            <div class="tour-price">
+              <strong>9.950.000đ đ</strong> / cabin
+            </div>
+            <a href="#" class="detail-button">Chi Tiết</a>
+          </div>
+        </div>
+      </article>
+      <!-- dt6 -->
+      <article class="tour-card" data-aos="zoom-in" data-aos-delay="100">
+        <a href=""><img src="assets/images/tours/dt6.jpg"
+            alt="Du Thuyền Calista – Du thuyền sang trọng bậc nhất Hạ Long" class="tour-card-image"></a>
+        <div class="tour-card-content">
+          <h2 class="tour-title">Du Thuyền Calista – Du thuyền sang trọng bậc nhất Hạ Long</h2>
+          <div class="tour-meta">
+            <div class="meta-item">
+              <!-- Location Icon -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z">
+                </path>
+              </svg>
+              <span>Hạ Long</span>
+            </div>
+          </div>
+          <div class="tour-meta">
+            <div class="tour-specs">
+              <div class="meta-item">
+                <!-- Cabin Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 18h-3v-5h-2v5H4v-7h15M4 8h15L12 3L4 8m16 12H3c-.55 0-1-.45-1-1V7c0-.25.1-.5.28-.68l8-6c.35-.26.8-.26 1.15 0l8 6c.18.17.28.43.28.68v12c0 .55-.45 1-1 1Z">
+                  </path>
+                </svg>
+                <span>39 Cabins</span>
+              </div>
+              <div class="star-rating">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="tour-description">
+            du thuyền Calista sẽ là điểm nhấn mới trên Vịnh Hạ Long. Với thiết kế hiện đại và tiện nghi cao cấp, Calista
+            hứa hẹn mang đến trải nghiệm du lịch đẳng cấp cho du khách khi khám phá vẻ đẹp của vịnh. Trên hành trình di
+            chuyển qua các…
+          </p>
+          <div class="tour-card-footer">
+            <div class="tour-price">
+              <strong>3.900.000đ đ</strong> / khách
+            </div>
+            <a href="#" class="detail-button">Chi Tiết</a>
+          </div>
+        </div>
+      </article>
+
     </div>
+
   </section>
 
   <!-- ===== WHY CHOOSE SECTION ===== -->
@@ -140,42 +528,22 @@
       <h2 data-aos="fade-up">Tại sao chọn Cham Vịnh Xanh</h2>
       <div class="why-grid">
         <div class="why-item" data-aos="fade-right">
-          <img src="assets/images/review1.jpg" alt="Khách hàng" />
+          <img src="assets/images/kh1.jpg" alt="Khách hàng" />
           <p>“Dịch vụ tuyệt vời, nhân viên thân thiện, du thuyền sang trọng.”</p>
         </div>
         <div class="why-item" data-aos="fade-up">
-          <img src="assets/images/review2.jpg" alt="Khách hàng" />
+          <img src="assets/images/kh2.jpg" alt="Khách hàng" />
           <p>“Trải nghiệm đáng nhớ, sẽ quay lại cùng gia đình!”</p>
         </div>
         <div class="why-item" data-aos="fade-left">
-          <img src="assets/images/review3.jpg" alt="Khách hàng" />
+          <img src="assets/images/kh3.jpg" alt="Khách hàng" />
           <p>“Hành trình ngắm hoàng hôn Hạ Long cực kỳ ấn tượng.”</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== BLOG SECTION ===== -->
-  <section class="blog container">
-    <h2 data-aos="fade-up">Cẩm Nang Du Lịch</h2>
-    <div class="blog-grid">
-      <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
-        <img src="assets/images/blog1.jpg" alt="Review du thuyền" />
-        <h3>Review Du Thuyền Pamela – Cực Chất</h3>
-        <p>Trải nghiệm dịch vụ cao cấp trên du thuyền Pamela 5 sao...</p>
-      </div>
-      <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
-        <img src="assets/images/blog2.jpg" alt="Review khách sạn" />
-        <h3>Top 5 khách sạn view biển tại Hạ Long</h3>
-        <p>Danh sách khách sạn sang trọng view biển đẹp nhất Hạ Long...</p>
-      </div>
-      <div class="blog-card" data-aos="fade-up" data-aos-delay="300">
-        <img src="assets/images/blog3.jpg" alt="Kinh nghiệm du lịch" />
-        <h3>Kinh nghiệm du lịch Hạ Long 2025</h3>
-        <p>Những mẹo nhỏ giúp bạn có chuyến đi hoàn hảo nhất...</p>
-      </div>
-    </div>
-  </section>
+
 
   <!-- ===== FOOTER ===== -->
   <footer>
@@ -187,22 +555,22 @@
       <div>
         <h4>Hoạt động</h4>
         <ul>
-          <li><a href="#">Tour Du Thuyền</a></li>
-          <li><a href="#">Ưu Đãi</a></li>
-          <li><a href="#">Cẩm Nang</a></li>
+          <li><a href="/#tours">Tour Du Thuyền</a></li>
+  <li><a href="uudai.html">Ưu Đãi</a></li>
         </ul>
       </div>
-      <div>
+      <div style=" grid-column: 3 / span 2;">
         <h4>Hỗ trợ</h4>
         <ul>
-          <li><a href="#">Chính sách hoàn tiền</a></li>
-          <li><a href="#">Điều khoản</a></li>
-          <li><a href="#">Liên hệ</a></li>
+           <li><a href="chinhsach.html">Chính sách hoàn tiền</a></li>
+          <li><a href="thanhtoan.html">Xác thực & thanh toán</a></li>
+          <li><a href="lienhe.html">Liên hệ</a></li>
         </ul>
         <p>
           Hotline: 0388 888 888<br />
           Email: info@chamvinhxanh.vn<br />
-          Địa chỉ: Bãi Cháy, Hạ Long
+          Văn Phòng Hà Nội: 31 Phan Đình Giót, Phương Liệt, Thanh Xuân, Hà Nội<br />
+          Văn Phòng Hạ Long: 3/24 Cao Xanh, Tổ 45B, Khu 4A, Đường Trần Phú, Hạ Long, Quảng Ninh
         </p>
       </div>
     </div>
@@ -221,11 +589,21 @@
       once: true,
     });
   </script>
+  <a id="draggable-hotline" class="hotline-button" href="tel:0582625538">
+    <div class="hotline-icon-wrapper">
+      <svg class="hotline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.02.74-.25 1.02l-2.2 2.2z" />
+      </svg>
+    </div>
+    <span>Hotline</span>
+  </a>
   <!-- Nút Lên Đầu Trang -->
-    <button id="backToTop" title="Lên đầu trang">
-    ⬆
-    </button>
-    <!-- Script điều khiển -->
-<script src="backtotop.js"></script>
+  <button id="backToTop" title="Lên đầu trang">
+    <i class="fa fa-angle-up"></i>
+  </button>
+  <!-- Script điều khiển -->
+  <script src="backtotop.js"></script>
 </body>
+
 </html>
