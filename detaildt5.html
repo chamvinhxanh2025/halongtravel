@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Chạm Vịnh Xanh - Tour du thuyền Hạ Long, trải nghiệm nghỉ dưỡng đẳng cấp giữa kỳ quan thiên nhiên thế giới.">
+  <title>Cham Vịnh Xanh | Tour Du Lịch Hạ Long</title>
+
+  <!-- SEO META -->
+  <meta property="og:title" content="Cham Vịnh Xanh - Du Lịch vịnh Hạ Long" />
+  <meta property="og:description" content="Trải nghiệm Tour Du Thuyền Hạ Long sang trọng cùng Cham Vịnh Xanh" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/logo.jpg" />
+  <meta property="og:phone-number" content="0582625538" />
+  <meta property="og:owner" content="itmrhoang@gmail.com" />
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <link rel="stylesheet" href="backtotop.css">
+  <script src="backtotop.js"></script>
+  <!-- hotline -->
+  <link rel="stylesheet" href="assets/css/hotline.css">
+  <script src="assets/js/hotline.js" defer></script>
+  <style>
+    .gallery {
+      position: relative;
+      height: 500px;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      background-image: url('https://placehold.co/1200x500/0d5a51/FFF?text=Aime%27e+Cruise');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 30px;
+    }
+
+    /* Note: In a real project, this would be a JavaScript-powered carousel */
+
+    /* ---- Main Layout Grid ---- */
+    .main-grid {
+      color: black;
+      border-radius: 8px;
+      margin-top: 69px;
+      background-color: #ebf6f4;
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      gap: 30px;
+    }
+
+    /* ---- Left Column: Tour Details ---- */
+    .tour-details {
+      padding: 16px 30px;
+
+    }
+
+    .tour-details h1 {
+
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 0 0 15px 0;
+    }
+
+    .quick-info-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 25px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 25px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--text-color-light);
+    }
+
+    .info-item strong {
+      color: var(--text-color-dark);
+    }
+
+    .stars {
+      color: var(--star-color);
+    }
+
+    .share-button {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: 1px solid var(--border-color);
+      padding: 8px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .share-button:hover {
+      background-color: var(--secondary-color);
+    }
+
+    /* ---- Tabs Navigation ---- */
+    .tabs-nav {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .tabs-nav a {
+      padding: 10px 5px;
+      margin-bottom: -1px;
+      text-decoration: none;
+      color: var(--text-color-light);
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+      transition: color 0.3s, border-color 0.3s;
+    }
+
+    .tabs-nav a.active,
+    .tabs-nav a:hover {
+      color: var(--primary-color);
+      border-bottom-color: var(--primary-color);
+    }
+
+    .tab-content {
+      font-size: 1rem;
+      color: black;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 10px;
+    }
+
+    .tab-content p {
+      margin: 0;
+      margin-bottom: 15px;
+    }
+
+    /* ---- Right Column: Sidebar ---- */
+    .sidebar-info-box {
+      background-color: var(--background-color);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      padding: 25px;
+      position: sticky;
+      top: 80px;
+      box-shadow: var(--shadow);
+    }
+
+    .sidebar-info-box h3 {
+      font-size: 1.2rem;
+      margin: 0 0 20px 0;
+      text-align: center;
+    }
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .info-list li {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--secondary-color);
+    }
+
+    .info-list li:last-child {
+      border-bottom: none;
+    }
+
+    .info-list .icon {
+      width: 20px;
+      height: 20px;
+      color: var(--primary-color);
+    }
+
+    .info-list .label {
+      font-weight: 500;
+      color: var(--text-color-dark);
+      width: 80px;
+    }
+
+    .info-list .value {
+      color: var(--text-color-light);
+      flex: 1;
+    }
+
+    .sidebar-buttons {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sidebar-buttons .btn {
+      padding: 12px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .btn-zalo {
+      background-color: #0068ff;
+      color: white;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 992px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .share-button {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        height: 300px;
+      }
+
+      .tour-details h1 {
+        font-size: 1.8rem;
+      }
+
+      .quick-info-bar {
+        gap: 15px;
+      }
+
+      .tabs-nav {
+        gap: 15px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* ---- Image Card ---- */
+    .image-card {
+      margin-top: 25px;
+      background-color: var(--background-color);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      text-align: center;
+      border: 1px solid var(--border-color);
+    }
+
+    .image-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .image-card .caption {
+      padding: 15px;
+      font-size: 0.95rem;
+      color: var(--text-color-light);
+      margin: 0;
+    }
+
+    /* ---- Header ---- */
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text-color-dark);
+    }
+
+    /* ---- Grid Layout ---- */
+    .inclusion-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      background-color: var(--background-color);
+      padding: 30px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
+    }
+
+    /* ---- Column Styling ---- */
+    .column h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      padding-bottom: 10px;
+      margin: 0 0 20px 0;
+      border-bottom: 2px solid var(--border-color);
+    }
+
+    .column.included h2 {
+      color: var(--color-green);
+    }
+
+    .column.not-included h2 {
+      color: var(--color-red);
+    }
+
+    .column h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: var(--color-blue);
+    }
+
+    .inclusion-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .inclusion-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      color: var(--text-color-light);
+    }
+
+    .inclusion-list .icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .column.included .icon {
+      color: var(--color-green);
+    }
+
+    .column.not-included .icon {
+      color: var(--color-red);
+    }
+
+    .sub-section .icon {
+      color: var(--color-blue);
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 900px) {
+      .inclusion-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .section-header h1 {
+        font-size: 2rem;
+      }
+
+      .inclusion-grid {
+        padding: 20px;
+      }
+    }
+
+
+    /* room */
+    /* ---- Room Section ---- */
+    .room-section {
+      background-color: var(--background-color);
+      background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M7.2,92.8C1.6,87.2,1.6,78.4,7.2,72.8l20-20c5.6-5.6,14.4-5.6,20,0s5.6,14.4,0,20l-20,20C21.6,98.4,12.8,98.4,7.2,92.8z M92.8,7.2C98.4,12.8,98.4,21.6,92.8,27.2l-20,20c-5.6,5.6-14.4,5.6-20,0s-5.6-14.4,0-20l20-20C78.4,1.6,87.2,1.6,92.8,7.2z" fill="%23f0f5f4" fill-opacity="0.5" /></svg>');
+      background-repeat: no-repeat;
+      background-position: top right;
+      padding: 40px;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .room-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 30px 0;
+    }
+
+    /* ---- Room Card ---- */
+    .room-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background-color: var(--background-color);
+      padding: 15px;
+      border-radius: var(--border-radius-md);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border-color);
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .room-card img {
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .room-info {
+      flex: 1;
+    }
+
+    .room-info h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-color-dark);
+    }
+
+    .room-info a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s;
+    }
+
+    .room-info a:hover {
+      color: var(--primary-color);
+    }
+
+    .room-details {
+      display: flex;
+      gap: 25px;
+      font-size: 0.9rem;
+      color: var(--text-color-light);
+    }
+
+    .room-details span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .room-details svg {
+      width: 16px;
+      height: 16px;
+      color: var(--primary-color);
+    }
+
+    /* ---- Main Book Button ---- */
+    .book-now-btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s, transform 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .book-now-btn:hover {
+      background-color: #0a4840;
+      transform: translateY(-2px);
+    }
+
+    /* ---- Modal/Popup Styling ---- */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background-color: var(--background-color);
+      padding: 30px 35px;
+      border-radius: var(--border-radius-lg);
+      width: 90%;
+      max-width: 550px;
+      position: relative;
+      transform: scale(0.9);
+      transition: transform 0.3s;
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: scale(1);
+    }
+
+    .modal-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .modal-header h2 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #aaa;
+      line-height: 1;
+    }
+
+    .booking-form .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .form-group {
+      width: 100%;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+      /* Important for consistent sizing */
+      background-color: #fcfcfc;
+    }
+
+    .form-group textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 2px rgba(13, 90, 81, 0.2);
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 600px) {
+      .room-section {
+        padding: 20px;
+      }
+
+      .room-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .room-card img {
+        width: 100%;
+        height: 150px;
+      }
+
+      .modal-content {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+  <style>
+    /* ---- Accordion for Itinerary ---- */
+    .itinerary-section h1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .accordion-item summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      /* Remove default marker */
+      color: var(--primary-color);
+    }
+
+    .accordion-item summary::-webkit-details-marker {
+      display: none;
+      /* Chrome/Safari */
+    }
+
+    .accordion-item summary::after {
+      content: '▼';
+      font-size: 0.8em;
+      transition: transform 0.3s;
+    }
+
+    .accordion-item[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      padding: 0 0 20px 20px;
+    }
+
+    /* ---- Timeline Styling ---- */
+    .timeline {
+      list-style: none;
+      padding-left: 20px;
+      margin: 0;
+      border-left: 2px solid var(--border-color);
+    }
+
+    .timeline li {
+      position: relative;
+      padding: 5px 0 15px 25px;
+      color: var(--text-color-light);
+      font-size: 0.95rem;
+    }
+
+    .timeline li::before {
+      content: '';
+      position: absolute;
+      left: -26px;
+      /* (bullet width / 2) + border width */
+      top: 10px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      border: 2px solid var(--secondary-color);
+    }
+
+    .timeline strong {
+      color: var(--text-color-dark);
+      font-weight: 600;
+    }
+
+    /* ---- Amenities Section ---- */
+    .amenities-section {
+      margin-top: 50px;
+    }
+
+    .amenities-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+    }
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .amenities-grid li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1rem;
+      color: var(--text-color-dark);
+    }
+
+    .amenities-grid .icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      color: var(--primary-color);
+      background-color: var(--secondary-color);
+      border-radius: 50%;
+      padding: 4px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header id="header">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/image/logo-rmbg.png" alt="Chạm Vịnh Xanh">
+        <a href="/">Chạm Vịnh Xanh</a>
+      </div>
+      <nav class="nav">
+        <a href="/">Trang chủ</a>
+        <a href="/#tours">Du thuyền Hạ Long</a>
+        <a href="huongdan.html">Hướng dẫn đặt tour</a>
+        <a href="lienhe.html">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="main-grid">
+      <!-- Left Column -->
+      <main class="tour-details">
+        <h1>Du Thuyền Aime’e – Du thuyền Hạ Long 6* mới nhất 2025</h1>
+
+        <div class="quick-info-bar">
+          <div class="info-item">
+            <strong>Đánh giá</strong>
+            <span class="stars">★★★★★</span>
+          </div>
+          <div class="info-item">
+            <strong>Ngày:</strong> 2 ngày 1 đêm
+          </div>
+          <div class="info-item">
+            <strong>Vị Trí:</strong> Vịnh Hạ Long
+          </div>
+          <button class="share-button">
+            <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18">
+              <path
+                d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L16.04,7.15C16.56,7.62 17.24,7.92 18,7.92C19.66,7.92 21,6.58 21,5C21,3.42 19.66,2 18,2C16.34,2 15,3.42 15,5C15,5.24 15.04,5.47 15.09,5.7L7.96,9.85C7.44,9.38 6.76,9.08 6,9.08C4.34,9.08 3,10.42 3,12C3,13.58 4.34,14.92 6,14.92C6.76,14.92 7.44,14.62 7.96,14.15L15.09,18.3C15.04,18.53 15,18.76 15,19C15,20.58 16.34,22 18,22C19.66,22 21,20.58 21,19C21,17.42 19.66,16.08 18,16.08Z" />
+            </svg>
+            Share
+          </button>
+        </div>
+
+        <nav style="position: sticky;
+            top: 80px;
+            backdrop-filter: blur(12px);
+            background-color: azure;
+            padding: 3px 10px 0px;
+            border-radius: 8px;">
+          <ul class="tabs-nav">
+            <li><a href="#infor">Giới thiệu</a></li>
+            <li><a href="#room">Các hạng phòng</a></li>
+            <li><a href="#timeline">Lịch trình</a></li>
+            <li><a href="#facility">Tiện nghi</a></li>
+            <li><a href="#includedexcluded">Bao Gồm</a></li>
+            <li><a href="#goiy">Gợi ý</a></li>
+          </ul>
+        </nav>
+
+        <div class="tab-content" id="infor">
+          <p><strong>AIME’E CRUISE</strong>- du thuyền mới nhất của Công ty tàu Bài Thơ Hạ Long – sẽ chính thức ra mắt
+            vào tháng 11/2025. Đây là cột mốc tiếp nối hơn 30 năm hành trình gắn bó với vịnh Hạ Long của Bài Thơ, mang
+            đến một trải nghiệm du lịch biển thế hệ mới cho du khách trong và ngoài nước.</p>
+          <p>Du thuyền được thiết kế theo phong cách hiện đại, nổi bật với tông màu đen – trắng tinh tế, tạo nên dáng vẻ
+            sang trọng và khác biệt giữa khung cảnh thiên nhiên hùng vĩ. Những đường nét uốn lượn mềm mại không chỉ tạo
+            hình hài hòa mà còn được tính toán để tối ưu hóa không gian sử dụng, giúp mỗi khoảnh khắc trên tàu trở nên
+            thoải mái, tiện nghi.</p>
+          <p>Hành trình cùng AIME’E CRUISE, du khách sẽ tìm thấy sự cân bằng giữa tiện nghi hiện đại và vẻ đẹp bất tận
+            của vịnh Hạ Long – nơi thiên nhiên và con người giao hòa trong từng trải nghiệm.</p>
+          <div class="image-card">
+            <img src="assets/images/dt1/img1.jpg"
+              alt="Nhà hàng Elysian trên du thuyền Aime'e">
+            <p class="caption">Du thuyền Aime’e – Nhà hàng Elysian</p>
+          </div>
+          <h1><b>Thiết Kế Hiện Đại & Đặc Sắc</b></h1>
+          <p>AIME’E CRUISE nổi bật với kiến trúc đương đại, được nhấn mạnh bởi bảng màu đen-trắng thanh lịch. Thiết kế này không chỉ tạo ra một không gian sang trọng mà còn thể hiện sự tinh tế trong từng chi tiết.
+
+Các đường nét uốn lượn và bố cục hài hòa của tàu giúp tối ưu hóa không gian sử dụng, mang đến cho du khách cảm giác thoải mái và dễ chịu trong suốt hành trình.</p>
+      <div class="image-card">
+            <img src="assets/images/dt1/img2.jpg"
+              alt="Du thuyền Aime’e">
+            <p class="caption">Du thuyền Aime’e</p>
+          </div>      
+          <h1><b>Nội Thất Indochine Tinh Tế</b></h1>  
+          <p>Bên trong, AIME’E CRUISE mang đến một không gian nội thất lấy cảm hứng từ phong cách Indochine và truyền thống Việt Nam, hòa quyện giữa các yếu tố gỗ tự nhiên, họa tiết tinh xảo và gam màu nhẹ nhàng.
+<br/>
+Sự kết hợp này tạo ra một bầu không khí ấm áp và thân thiện, kết nối hài hòa giữa văn hóa Việt Nam và Pháp, đảm bảo một chuyến đi độc đáo và khó quên. Mỗi chi tiết nội thất đều được thiết kế tỉ mỉ, từ các món đồ trang trí đến ánh sáng, tất cả đều nhằm tạo ra một không gian thư giãn và dễ chịu cho du khách.</p>
+ <div class="image-card">
+            <img src="assets/images/dt1/img3.jpg"
+              alt="Du thuyền Aime’e">
+            <p class="caption">Du thuyền Aime’e</p>
+          </div>    
+</div>
+
+        <div class="tab-content" id="room">
+          <!-- Room Section HTML -->
+          <section class="room-section" style="  margin-top: 22px;
+    padding:15px;
+    border-radius: 12px;
+    background: var(--background-color);">
+            <h2>Các hạng phòng</h2>
+
+            <div class="room-card">
+              <img src="assets/images/phong/p1.jpg" alt="Grace Ocean Suite">
+              <div class="room-info">
+                <h3><a href="#">Grace Ocean Suite</a></h3>
+                <div class="room-details">
+                  <span><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M21 3H3V5H5V3H7V5H9V3H11V5H13V3H15V5H17V3H19V5H21V3M3 21H21V19H19V21H17V19H15V21H13V19H11V21H9V19H7V21H5V19H3V21M21 7V17H3V7H21M5 9V15H19V9H5Z" />
+                    </svg>30-32 m²</span>
+                  <span><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M19,5H15V3H9V5H5A2,2 0 0,0 3,7V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V7A2,2 0 0,0 19,5M19,19H5V7H19V19M15,13H13V11H15M11,13H9V11H11M15,17H13V15H15M11,17H9V15H11Z" />
+                    </svg>Tầng 1</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="room-card">
+              <img src="assets/images/phong/p2.jpg" alt="Eden Balcony Suite">
+              <div class="room-info">
+                <h3><a href="#">Eden Balcony Suite</a></h3>
+                <div class="room-details">
+                  <span><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M21 3H3V5H5V3H7V5H9V3H11V5H13V3H15V5H17V3H19V5H21V3M3 21H21V19H19V21H17V19H15V21H13V19H11V21H9V19H7V21H5V19H3V21M21 7V17H3V7H21M5 9V15H19V9H5Z" />
+                    </svg>30-32 m²</span>
+                  <span><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M19,5H15V3H9V5H5A2,2 0 0,0 3,7V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V7A2,2 0 0,0 19,5M19,19H5V7H19V19M15,13H13V11H15M11,13H9V11H11M15,17H13V15H15M11,17H9V15H11Z" />
+                    </svg>Tầng 2</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="room-card">
+              <img src="assets/images/phong/p3.jpg" alt="Essence Terrace Suite">
+              <div class="room-info">
+                <h3><a href="#">Essence Terrace Suite</a></h3>
+                <div class="room-details">
+                  <span><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M21 3H3V5H5V3H7V5H9V3H11V5H13V3H15V5H17V3H19V5H21V3M3 21H21V19H19V21H17V19H15V21H13V19H11V21H9V19H7V21H5V19H3V21M21 7V17H3V7H21M5 9V15H19V9H5Z" />
+                    </svg>65 m²</span>
+                  <span><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M19,5H15V3H9V5H5A2,2 0 0,0 3,7V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V7A2,2 0 0,0 19,5M19,19H5V7H19V19M15,13H13V11H15M11,13H9V11H11M15,17H13V15H15M11,17H9V15H11Z" />
+                    </svg>Tầng 2</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="room-card">
+              <img src="assets/images/phong/p4.jpg" alt="AIME’E Suite">
+              <div class="room-info">
+                <h3><a href="#">AIME’E Suite</a></h3>
+                <div class="room-details">
+                  <span><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M21 3H3V5H5V3H7V5H9V3H11V5H13V3H15V5H17V3H19V5H21V3M3 21H21V19H19V21H17V19H15V21H13V19H11V21H9V19H7V21H5V19H3V21M21 7V17H3V7H21M5 9V15H19V9H5Z" />
+                    </svg>60 m²</span>
+                  <span><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M19,5H15V3H9V5H5A2,2 0 0,0 3,7V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V7A2,2 0 0,0 19,5M19,19H5V7H19V19M15,13H13V11H15M11,13H9V11H11M15,17H13V15H15M11,17H9V15H11Z" />
+                    </svg>Tầng 2</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="book-now-btn" id="openModalBtn">
+              <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20">
+                <path
+                  d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z" />
+              </svg>
+              Đặt Ngay
+            </button>
+          </section>
+        </div>
+
+        <!-- Modal/Popup HTML -->
+        <div class="modal-overlay" id="bookingModal">
+          <div class="modal-content">
+            <button class="close-modal" id="closeModalBtn">&times;</button>
+            <div class="modal-header">
+              <h2>Du Thuyền Aime’e – Du thuyền Hạ Long 6*</h2>
+            </div>
+            <form action="#" class="booking-form">
+              <div class="form-grid">
+                <div class="form-group">
+                  <input type="date" placeholder="Ngày nhận phòng" required>
+                </div>
+                <div class="form-group">
+                  <select required>
+                    <option value="">Người lớn</option>
+                    <option value="1">1 Người lớn</option>
+                    <option value="2">2 Người lớn</option>
+                    <option value="3">3 Người lớn</option>
+                    <option value="4">4+ Người lớn</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select>
+                    <option value="">Trẻ em</option>
+                    <option value="0">0 Trẻ em</option>
+                    <option value="1">1 Trẻ em</option>
+                    <option value="2">2 Trẻ em</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 15px;">
+                <input type="text" placeholder="Họ và tên" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 15px;">
+                <input type="tel" placeholder="Số điện thoại" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 15px;">
+                <input type="email" placeholder="Địa chỉ email" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 25px;">
+                <textarea placeholder="Yêu cầu của bạn"></textarea>
+              </div>
+              <button type="submit" class="book-now-btn" style="width: 100%; justify-content: center;">ĐẶT NGAY</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Itinerary Section -->
+        <section class="itinerary-section tab-content" id="timeline" style="
+        margin-top: 22px;
+        padding:  15px;
+        border-radius: 12px;
+        background: var(--background-color);">
+          <h1>Lịch trình</h1>
+
+          <details class="accordion-item" open>
+            <summary>Lịch trình 2 ngày 1 đêm</summary>
+            <div class="accordion-content">
+              <h3>HÀ NỘI – HẠ LONG – ĐẢO TITOP (L,D)</h3>
+              <ul class="timeline">
+                <li><strong>08:00 - 08:30:</strong> Xe đón Quý khách tại các khách sạn khu vực phố Cổ Hà Nội (nếu khách
+                  hàng đặt dịch vụ xe). Trong khoảng thời gian 2,5 tiếng di chuyển tới Hạ Long, Quý khách sẽ dừng nghỉ
+                  20 phút.</li>
+                <li><strong>11:30 – 11:45:</strong> Chào đón đoàn tại cảng Quốc tế Hạ Long, Bãi Cháy, Quảng Ninh.</li>
+                <li><strong>12:15:</strong> Xuồng máy cao tốc đưa đoàn lên tàu, làm thủ tục check-in, thưởng thức nước
+                  uống chào mừng và nghe giới thiệu về lịch trình tour cùng các quy định an toàn trên tàu.</li>
+                <li><strong>13:00:</strong> Thưởng thức bữa trưa tại nhà hàng trong khi du thuyền bắt đầu hành trình
+                  khám phá Vịnh Hạ Long.</li>
+                <li><strong>14:45:</strong> Chèo kayak hoặc đi thuyền nan thăm Hang Luồn. Trải nghiệm khám phá vẻ đẹp tự
+                  nhiên của những đảo đá vôi trên Vịnh.</li>
+                <li><strong>16:00:</strong> Tham quan và tắm biển tại Đảo Titop. Quý khách có thể nghỉ ngơi, bơi lội
+                  hoặc leo lên đỉnh núi để ngắm nhìn toàn cảnh Vịnh Hạ Long từ độ cao 100m.</li>
+                <li><strong>17:00 – 18:30:</strong> Tận hưởng khoảnh khắc hoàng hôn tuyệt đẹp trên Vịnh với đồ uống yêu
+                  thích và tham gia lớp học nấu ăn.</li>
+                <li><strong>19:15:</strong> Thưởng thức bữa tối trong không gian lung linh và ấm áp.</li>
+                <li><strong>21:00:</strong> Thư giãn trên khu vực sundeck hoặc tham gia trải nghiệm câu mực thú vị.</li>
+                <li><strong>22:30:</strong> Ngủ ngon để nạp năng lượng cho ngày khám phá tiếp theo.</li>
+              </ul>
+
+              <h3>NGÀY 2: HẠ LONG – HANG SỬNG SỐT – HÀ NỘI (B,L)</h3>
+              <ul class="timeline">
+                <li><strong>06:15:</strong> Thức dậy ngắm bình minh trên vịnh và khởi động nhẹ nhàng với lớp học Thái
+                  Cực Quyền.</li>
+                <li><strong>06:30:</strong> Ăn sáng nhẹ với trà, cà phê và bánh ngọt.</li>
+                <li><strong>07:20:</strong> Tham quan Hang Sửng Sốt, hang động lớn và đẹp nhất trên Vịnh Hạ Long, khám
+                  phá vẻ đẹp kỳ vĩ của các nhũ đá hình thành qua hàng ngàn năm.</li>
+                <li><strong>09:15:</strong> Trở lại du thuyền, thực hiện thủ tục trả phòng và thanh toán.</li>
+                <li><strong>09:30:</strong> Thưởng thức bữa trưa nhẹ theo phong cách buffet tại nhà hàng.</li>
+                <li><strong>10:45 – 11:00:</strong> Đoàn về đến bến tàu, kết thúc hành trình tham quan Vịnh Hạ Long.
+                </li>
+                <li><strong>11:15 – 11:30:</strong> Xe đưa Quý khách về Hà Nội, dự kiến đến nơi khoảng 14:30 – 14:45.
+                </li>
+              </ul>
+            </div>
+          </details>
+        </section>
+
+        <!-- Amenities Section -->
+        <section class="amenities-section tab-content" id='facility' style="  margin-top: 22px;
+    padding: 15px;
+    border-radius: 12px;
+    background: var(--background-color);">
+          <h2>Tiện nghi Du thuyền</h2>
+          <ul class="amenities-grid">
+            <li>
+              <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                </svg></div>
+              <span>Jacuzzi Sundara</span>
+            </li>
+            <li>
+              <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                </svg></div>
+              <span>Spa & Massage Serene</span>
+            </li>
+            <li>
+              <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                </svg></div>
+              <span>Nhà Hàng Elysian</span>
+            </li>
+            <li>
+              <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                </svg></div>
+              <span>Sundeck</span>
+            </li>
+            <li>
+              <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                </svg></div>
+              <span>Phòng nghỉ</span>
+            </li>
+            <li>
+              <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                </svg></div>
+              <span>Amber Bar & lounge</span>
+            </li>
+          </ul>
+        </section>
+
+        <div class="tab-content" id="includedexcluded">
+          <div class="section-header">
+            <h1>Bao Gồm / Không Bao Gồm</h1>
+          </div>
+
+          <div class="inclusion-grid">
+            <!-- Left Column: Included -->
+            <div class="column included">
+              <h2>DỊCH VỤ BAO GỒM</h2>
+              <ul class="inclusion-list">
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                    </svg></div>
+                  <span>Phòng nghỉ hạng sang view Vịnh</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                    </svg></div>
+                  <span>Nước uống chào mừng khi check in</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                    </svg></div>
+                  <span>Trái cây tươi đặt phòng</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                    </svg></div>
+                  <span>Trà/ cà phê/ 01 chai nước suối/01 khách trong phòng</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                    </svg></div>
+                  <span>Hướng dẫn viên tiếng Việt/ Anh trên tàu</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                    </svg></div>
+                  <span>Vé thắng cảnh theo chương trình</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                    </svg></div>
+                  <span>Các tiện ích chung trên du thuyền (phòng gym, bể sục jacuzzi)</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                    </svg></div>
+                  <span>Lớp học nấu ăn, lớp học Thái Cực Quyền, dụng cụ câu mực, tiệc trà chiều</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                    </svg></div>
+                  <span>Đò nan tham quan Hang Luồn hoặc kayak</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                    </svg></div>
+                  <span>1 bữa trưa + 1 bữa tối + 1 bữa sáng + 1 bữa trưa nhẹ buffet</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                    </svg></div>
+                  <span>Phí dịch vụ và bảo hiểm theo tàu</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                    </svg></div>
+                  <span>Các quyền lợi đặc biệt đi kèm khi đặt hạng phòng cao cấp Essence Suite và Aime’e Suite</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                    </svg></div>
+                  <span>VAT</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Right Column: Not Included & Others -->
+            <div class="column not-included">
+              <h2>DỊCH VỤ KHÔNG BAO GỒM</h2>
+              <ul class="inclusion-list">
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z" />
+                    </svg></div>
+                  <span>Vận chuyển từ Hà Nội – Hạ Long – Hà Nội (theo yêu cầu)</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z" />
+                    </svg></div>
+                  <span>Vé máy bay, phòng nghỉ khách sạn và lệ phí visa</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z" />
+                    </svg></div>
+                  <span>Đồ uống</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z" />
+                    </svg></div>
+                  <span>Dịch vụ Spa, Massage</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z" />
+                    </svg></div>
+                  <span>Phòng hát Karaoke</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z" />
+                    </svg></div>
+                  <span>Phụ thu các ngày lễ như Noel, Năm mới và Tết Nguyên Đán</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z" />
+                    </svg></div>
+                  <span>Tip cho thủy thủ đoàn và các chi tiêu cá nhân</span>
+                </li>
+                <li>
+                  <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z" />
+                    </svg></div>
+                  <span>Các chi phí không được liệt kê trong mục bao gồm</span>
+                </li>
+              </ul>
+
+              <div class="sub-section">
+                <h3>ĐỒ DÙNG CẦN MANG THEO</h3>
+                <ul class="inclusion-list">
+                  <li>
+                    <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,17H11V15H13M13,13H11V7H13M12,2Z" />
+                      </svg></div>
+                    <span>Hộ chiếu/Căn cước công dân</span>
+                  </li>
+                  <li>
+                    <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,17H11V15H13M13,13H11V7H13M12,2Z" />
+                      </svg></div>
+                    <span>Máy ảnh, quay phim</span>
+                  </li>
+                  <li>
+                    <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,17H11V15H13M13,13H11V7H13M12,2Z" />
+                      </svg></div>
+                    <span>Kính râm, mũ, đồ bơi, kem chống nắng, thuốc chống côn trùng</span>
+                  </li>
+                  <li>
+                    <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,17H11V15H13M13,13H11V7H13M12,2Z" />
+                      </svg></div>
+                    <span>Đồ dùng y tế, thuốc cá nhân cần thiết</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="sub-section">
+                <h3>LƯU Ý QUAN TRỌNG</h3>
+                <ul class="inclusion-list">
+                  <li>
+                    <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,17H11V15H13M13,13H11V7H13M12,2Z" />
+                      </svg></div>
+                    <span>Kết nối wifi có thể hoạt động không ổn định tại các khu vực sóng yếu hoặc trong khi di chuyển,
+                      rất mong Quý khách thông cảm.</span>
+                  </li>
+                  <li>
+                    <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,17H11V15H13M13,13H11V7H13M12,2Z" />
+                      </svg></div>
+                    <span>Các thông tin cá nhân bao gồm: Họ tên đầy đủ, ngày tháng năm sinh, giới tính, quốc tịch, số Hộ
+                      chiếu/Căn cước công dân và Visa còn hạn sử dụng (dành cho người Nước Ngoài)... cần được gửi cho
+                      chúng tôi trước ngày khởi hành.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="sub-section">
+                <h3>Lịch trình:</h3>
+                <ul class="inclusion-list">
+                  <li>
+                    <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,17H11V15H13M13,13H11V7H13M12,2Z" />
+                      </svg></div>
+                    <span>Thông tin về lịch trình và thời gian chính xác cho các hoạt động sẽ được thông báo bởi hướng
+                      dẫn viên/quản lý du thuyền trong chuyến đi.</span>
+                  </li>
+                  <li>
+                    <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                          d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,17H11V15H13M13,13H11V7H13M12,2Z" />
+                      </svg></div>
+                    <span>Lịch trình trên có thể thay đổi tùy thuộc vào tình hình thời tiết, thủy triều và các quy định
+                      từ Ban Quản lý Vịnh Hạ Long.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </main>
+
+      <!-- Right Column (Sidebar) -->
+      <aside class="sidebar">
+        <div class="sidebar-info-box">
+          <h3>Thông Tin Du Thuyền</h3>
+          <ul class="info-list">
+            <li>
+              <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z" />
+                </svg></div>
+              <span class="label">Hạ thủy</span>
+              <span class="value">2025</span>
+            </li>
+            <li>
+              <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20,11V8H4V11H2V6A2,2 0 0,1 4,4H20A2,2 0 0,1 22,6V11H20M4,13V16H11V13H4M2,18V12L3,13V18H2M13,16H20V13H13V16M21,18L22,12V18H21M2,20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V19H2V20Z" />
+                </svg></div>
+              <span class="label">Cabin</span>
+              <span class="value">29</span>
+            </li>
+            <li>
+              <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+                </svg></div>
+              <span class="label">Thân vỏ</span>
+              <span class="value">Kim loại</span>
+            </li>
+            <li>
+              <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M18.92,8H5.08L5,6H19L18.92,8M19,10H5L4,17H20L19,10M16,13.5A.5.5,0 0,0 15.5,13A.5.5,0 0,0 15,13.5A.5.5,0 0,0 15.5,14A.5.5,0 0,0 16,13.5M9,13.5A.5.5,0 0,0 8.5,13A.5.5,0 0,0 8,13.5A.5.5,0 0,0 8.5,14A.5.5,0 0,0 9,13.5M20,2H4A2,2 0 0,0 2,4V17A2,2 0 0,0 4,19H9V22H11V19H13V22H15V19H20A2,2 0 0,0 22,17V4A2,2 0 0,0 20,2Z" />
+                </svg></div>
+              <span class="label">Hành trình</span>
+              <span class="value">Vịnh Hạ Long, Bồng Sơ</span>
+            </li>
+            <li>
+              <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12,7L14,11L18,11L15,13.5L16,17.5L12,15L8,17.5L9,13.5L6,11L10,11L12,7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2Z" />
+                </svg></div>
+              <span class="label">Chủ đầu tư</span>
+              <span class="value">Công Ty TNHH Chạm Vịnh xanh</span>
+            </li>
+            <li>
+              <div class="icon"><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M10,2H14A2,2 0 0,1 16,4V6.27C17.15,6.6 18.08,7.34 18.69,8.32L21.3,7.14L22.72,9.62L20.44,11.03C20.5,11.35 20.5,11.67 20.5,12C20.5,12.33 20.5,12.65 20.44,12.97L22.72,14.38L21.3,16.86L18.69,15.68C18.08,16.66 17.15,17.4 16,17.73V20A2,2 0 0,1 14,22H10A2,2 0 0,1 8,20V17.73C6.85,17.4 5.92,16.66 5.31,15.68L2.7,16.86L1.28,14.38L3.56,12.97C3.5,12.65 3.5,12.33 3.5,12C3.5,11.67 3.5,11.35 3.56,11.03L1.28,9.62L2.7,7.14L5.31,8.32C5.92,7.34 6.85,6.6 8,6.27V4A2,2 0 0,1 10,2M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                </svg></div>
+              <span class="label">Điều hành</span>
+              <span class="value">Công ty vận chuyển Chạm Vịnh Xanh</span>
+            </li>
+          </ul>
+          <div class="sidebar-buttons">
+            <a href="#" class="btn btn-zalo">Zalo</a>
+            <a href="#" class="btn btn-primary">Tư Vấn</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+      <section class="tours" id="goiy">
+    <h2 class="label fade-up">Gợi ý cho bạn</h2>
+    <div class="tour-list-container">
+      <!-- Tour Card 1 -->
+      <article class="tour-card" data-aos="zoom-in" data-aos-delay="100">
+        <a href="detaildt1.html"><img src="assets/images/tours/dt1.jpg" alt="Du thuyền Aime'e" class="tour-card-image"></a>
+        <div class="tour-card-content">
+          <h2 class="tour-title">Du Thuyền Aime’e – Du thuyền Hạ Long 6* mới nhất 2025</h2>
+          <div class="tour-meta">
+            <div class="meta-item">
+              <!-- Location Icon -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z">
+                </path>
+              </svg>
+              <span>Vịnh Hạ Long</span>
+            </div>
+          </div>
+          <div class="tour-meta">
+            <div class="tour-specs">
+              <div class="meta-item">
+                <!-- Cabin Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 18h-3v-5h-2v5H4v-7h15M4 8h15L12 3L4 8m16 12H3c-.55 0-1-.45-1-1V7c0-.25.1-.5.28-.68l8-6c.35-.26.8-.26 1.15 0l8 6c.18.17.28.43.28.68v12c0 .55-.45 1-1 1Z">
+                  </path>
+                </svg>
+                <span>29 cabins</span>
+              </div>
+              <div class="star-rating">
+                <!-- Star Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="tour-description">
+            Du thuyền AIMEE CRUISE, du thuyền mới nhất từ Công ty tàu Bái Thọ Hạ Long, sẽ chính thức ra mắt vào tháng 11
+            năm 2025, hứa hẹn mang đến trải nghiệm sang trọng trên những vịnh biển tuyệt đẹp của Việt Nam. Với thiết kế
+            hiện đại đầy quyến...
+          </p>
+          <div class="tour-card-footer">
+            <div class="tour-price">
+              <strong>3.000.000 đ</strong> / khách
+            </div>
+            <a href="detaildt1.html" class="detail-button">Chi Tiết</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour Card 2 -->
+      <article class="tour-card" data-aos="zoom-in" data-aos-delay="100">
+        <a href="detaildt2.html"><img src="assets/images/tours/dt2.jpg" alt="Du thuyền Azura" class="tour-card-image"></a>
+        <div class="tour-card-content">
+          <h2 class="tour-title">Du thuyền Azura- tàu ngủ đêm khám phá Vịnh Lan Hạ</h2>
+          <div class="tour-meta">
+            <div class="meta-item">
+              <!-- Location Icon -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z">
+                </path>
+              </svg>
+              <span>Vịnh Lan Hạ</span>
+            </div>
+          </div>
+          <div class="tour-meta">
+            <div class="tour-specs">
+              <div class="meta-item">
+                <!-- Cabin Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 18h-3v-5h-2v5H4v-7h15M4 8h15L12 3L4 8m16 12H3c-.55 0-1-.45-1-1V7c0-.25.1-.5.28-.68l8-6c.35-.26.8-.26 1.15 0l8 6c.18.17.28.43.28.68v12c0 .55-.45 1-1 1Z">
+                  </path>
+                </svg>
+                <span>30 cabins cabins</span>
+              </div>
+              <div class="star-rating">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="tour-description">
+            Du thuyền Azura, sản phẩm thế hệ thứ hai của Công ty Cổ phần Dịch vụ Du lịch Đại Dương, đang tạo nên những
+            kỳ vọng lớn lao trong ngành du lịch biển Việt Nam. Sau thành công vượt trội của du thuyền Aspira, Azura hứa
+            hẹn sẽ mang đến...
+          </p>
+          <div class="tour-card-footer">
+            <div class="tour-price">
+              <strong>9.600.000 đ</strong> / Cabin
+            </div>
+            <a href="detaildt2.html" class="detail-button">Chi Tiết</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour Card 3 -->
+      <article class="tour-card" data-aos="zoom-in" data-aos-delay="100">
+        <a href="detaildt3.html"> <img src="assets/images/tours/dt3.jpg" alt="Du thuyền Ngủ Đêm L'amour" class="tour-card-image"> </a>
+        <div class="tour-card-content">
+          <h2 class="tour-title">Du thuyền Ngủ Đêm L’amour – Đậm Chất Văn Hóa Việt Nam</h2>
+          <div class="tour-meta">
+            <div class="meta-item">
+              <!-- Location Icon -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z">
+                </path>
+              </svg>
+              <span>Vịnh Hạ Long</span>
+            </div>
+          </div>
+          <div class="tour-meta">
+            <div class="tour-specs">
+              <div class="meta-item">
+                <!-- Cabin Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 18h-3v-5h-2v5H4v-7h15M4 8h15L12 3L4 8m16 12H3c-.55 0-1-.45-1-1V7c0-.25.1-.5.28-.68l8-6c.35-.26.8-.26 1.15 0l8 6c.18.17.28.43.28.68v12c0 .55-.45 1-1 1Z">
+                  </path>
+                </svg>
+                <span>33 Cabins cabins</span>
+              </div>
+              <div class="star-rating">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="tour-description">
+            Với 33 không gian nghỉ dưỡng cao cấp, sang trọng và đẳng cấp, L'amour cam kết mang đến cho du khách những
+            khoảnh khắc khó quên. Mỗi không gian không chỉ là nơi nghỉ ngơi mà còn là một câu chuyện thú vị, gợi nhớ về
+            những giá trị văn...
+          </p>
+          <div class="tour-card-footer">
+            <div class="tour-price">
+              <strong>9.900.000 đ</strong> / Cabin
+            </div>
+            <a href="detaildt3.html" class="detail-button">Chi Tiết</a>
+          </div>
+        </div>
+      </article>
+      <!-- dt4 -->
+      <article class="tour-card" data-aos="zoom-in" data-aos-delay="100">
+        <a href="detaildt4.html"><img src="assets/images/tours/dt4.jpg"
+            alt="Du thuyền Hermes – Du thuyền ngủ đêm 5* Khám phá vịnh Hạ Long" class="tour-card-image"></a>
+        <div class="tour-card-content">
+          <h2 class="tour-title">Du thuyền Hermes – Du thuyền ngủ đêm 5* Khám phá vịnh Hạ Long</h2>
+          <div class="tour-meta">
+            <div class="meta-item">
+              <!-- Location Icon -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z">
+                </path>
+              </svg>
+              <span>Cảng Tuần Châu</span>
+            </div>
+          </div>
+          <div class="tour-meta">
+            <div class="tour-specs">
+              <div class="meta-item">
+                <!-- Cabin Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 18h-3v-5h-2v5H4v-7h15M4 8h15L12 3L4 8m16 12H3c-.55 0-1-.45-1-1V7c0-.25.1-.5.28-.68l8-6c.35-.26.8-.26 1.15 0l8 6c.18.17.28.43.28.68v12c0 .55-.45 1-1 1Z">
+                  </path>
+                </svg>
+                <span>18 phòng nghỉ cabins</span>
+              </div>
+              <div class="star-rating">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="tour-description">
+            Du thuyền Hermes - một kiệt tác trên biển, hứa hẹn mang đến cho du khách những trải nghiệm nghỉ dưỡng đẳng
+            cấp bậc nhất tại Vịnh Hạ Long. Với 18 phòng nghỉ sang trọng, được thiết kế tỉ mỉ theo phong cách tân cổ
+            điển, mỗi phòng đều là...
+          </p>
+          <div class="tour-card-footer">
+            <div class="tour-price">
+              <strong>4.250.000đ đ</strong> / khách
+            </div>
+            <a href="detaildt4.html" class="detail-button">Chi Tiết</a>
+          </div>
+        </div>
+      </article>
+      <!-- dt5 -->
+      <article class="tour-card" data-aos="zoom-in" data-aos-delay="100">
+        <a href="detaildt5.html"><img src="assets/images/tours/dt5.jpg" alt="Du Thuyền Sea Star 6* – Sang trọng bậc nhất tại Hạ Long"
+            class="tour-card-image"></a>
+        <div class="tour-card-content">
+          <h2 class="tour-title">Du Thuyền Sea Star 6* – Sang trọng bậc nhất tại Hạ Long</h2>
+          <div class="tour-meta">
+            <div class="meta-item">
+              <!-- Location Icon -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z">
+                </path>
+              </svg>
+              <span>Cảng Tuần Châu</span>
+            </div>
+          </div>
+          <div class="tour-meta">
+            <div class="tour-specs">
+              <div class="meta-item">
+                <!-- Cabin Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 18h-3v-5h-2v5H4v-7h15M4 8h15L12 3L4 8m16 12H3c-.55 0-1-.45-1-1V7c0-.25.1-.5.28-.68l8-6c.35-.26.8-.26 1.15 0l8 6c.18.17.28.43.28.68v12c0 .55-.45 1-1 1Z">
+                  </path>
+                </svg>
+                <span>39 Cabins</span>
+              </div>
+              <div class="star-rating">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="tour-description">
+            Du thuyền Sea Star có chiều dài 110m và rộng 16.2m, được thiết kế với tiêu chí mang lại sự thoải mái và tiện
+            nghi tối đa cho du khách. Nội thất bên trong được bài trí tinh tế, kết hợp giữa phong cách hiện đại và nét
+            đẹp truyền…
+          </p>
+          <div class="tour-card-footer">
+            <div class="tour-price">
+              <strong>9.950.000đ đ</strong> / cabin
+            </div>
+            <a href="detaildt5.html" class="detail-button">Chi Tiết</a>
+          </div>
+        </div>
+      </article>
+      <!-- dt6 -->
+      <article class="tour-card" data-aos="zoom-in" data-aos-delay="100">
+        <a href="detaildt6.html"><img src="assets/images/tours/dt6.jpg"
+            alt="Du Thuyền Calista – Du thuyền sang trọng bậc nhất Hạ Long" class="tour-card-image"></a>
+        <div class="tour-card-content">
+          <h2 class="tour-title">Du Thuyền Calista – Du thuyền sang trọng bậc nhất Hạ Long</h2>
+          <div class="tour-meta">
+            <div class="meta-item">
+              <!-- Location Icon -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z">
+                </path>
+              </svg>
+              <span>Hạ Long</span>
+            </div>
+          </div>
+          <div class="tour-meta">
+            <div class="tour-specs">
+              <div class="meta-item">
+                <!-- Cabin Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 18h-3v-5h-2v5H4v-7h15M4 8h15L12 3L4 8m16 12H3c-.55 0-1-.45-1-1V7c0-.25.1-.5.28-.68l8-6c.35-.26.8-.26 1.15 0l8 6c.18.17.28.43.28.68v12c0 .55-.45 1-1 1Z">
+                  </path>
+                </svg>
+                <span>39 Cabins</span>
+              </div>
+              <div class="star-rating">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="tour-description">
+            du thuyền Calista sẽ là điểm nhấn mới trên Vịnh Hạ Long. Với thiết kế hiện đại và tiện nghi cao cấp, Calista
+            hứa hẹn mang đến trải nghiệm du lịch đẳng cấp cho du khách khi khám phá vẻ đẹp của vịnh. Trên hành trình di
+            chuyển qua các…
+          </p>
+          <div class="tour-card-footer">
+            <div class="tour-price">
+              <strong>3.900.000đ đ</strong> / khách
+            </div>
+            <a href="detaildt6.html" class="detail-button">Chi Tiết</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </section>
+  </div>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>Cham Vịnh Xanh</h3>
+        <div class="logo"><img src="assets/image/logo.png" alt="Chạm Vịnh Xanh"></div>
+      </div>
+      <div>
+        <h4>Hoạt động</h4>
+        <ul>
+          <li><a href="/#tours">Tour Du Thuyền</a></li>
+          <li><a href="uudai.html">Ưu Đãi</a></li>
+
+        </ul>
+      </div>
+      <div style=" grid-column: 3 / span 2;">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="chinhsach.html">Chính sách hoàn tiền</a></li>
+          <li><a href="thanhtoan.html">Xác thực & thanh toán</a></li>
+          <li><a href="lienhe.html">Liên hệ</a></li>
+        </ul>
+        <p>
+          Hotline: 0388 888 888<br />
+          Email: info@chamvinhxanh.vn<br />
+          Văn Phòng Hà Nội: 31 Phan Đình Giót, Phương Liệt, Thanh Xuân, Hà Nội<br />
+          Văn Phòng Hạ Long: 3/24 Cao Xanh, Tổ 45B, Khu 4A, Đường Trần Phú, Hạ Long, Quảng Ninh
+        </p>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Cham Vịnh Xanh. All rights reserved. itmrhoang®</p>
+  </footer>
+
+  <!-- ===== JS: Header Scroll + Parallax ===== -->
+  <script src="script.js">
+  </script>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+  <a id="draggable-hotline" class="hotline-button" href="tel:0582625538">
+    <div class="hotline-icon-wrapper">
+      <svg class="hotline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.02.74-.25 1.02l-2.2 2.2z" />
+      </svg>
+    </div>
+    <span>Hotline</span>
+  </a>
+  <!-- Nút Lên Đầu Trang -->
+  <button id="backToTop" title="Lên đầu trang">
+    <i class="fa fa-angle-up"></i>
+  </button>
+  <!-- Script điều khiển -->
+  <script src="backtotop.js"></script>
+  <!-- JavaScript -->
+  <script>
+    window.onload = () => {
+      const openModalBtn = document.getElementById('openModalBtn');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const bookingModal = document.getElementById('bookingModal');
+
+      // Function to open the modal
+      function openModal() {
+        bookingModal.classList.add('active');
+      }
+
+      // Function to close the modal
+      function closeModal() {
+        bookingModal.classList.remove('active');
+      }
+
+      // Event listeners
+      openModalBtn.addEventListener('click', openModal);
+      closeModalBtn.addEventListener('click', closeModal);
+
+      // Close modal when clicking on the overlay
+      bookingModal.addEventListener('click', (event) => {
+        if (event.target === bookingModal) {
+          closeModal();
+        }
+      });
+
+      // Close modal with the 'Escape' key
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && bookingModal.classList.contains('active')) {
+          closeModal();
+        }
+      });
+    };
+  </script>
+</body>
+
+</body>
+
+</html>

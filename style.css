@@ -14,8 +14,14 @@
   --star-color: #f39c12;
   /* Màu vàng của sao */
   --border-radius: 16px;
+  --border-color: #e0e4e4;
   /* Bo góc */
   --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  --color-green: #27ae60;
+  --color-red: #c0392b;
+  --color-blue: #2980b9;
+  --body-bg-color: #f9fafb;
 }
 
 /* ===== BASE ===== */
@@ -67,31 +73,32 @@ a {
 
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1350px;
   min-width: 470px;
   margin: auto;
 }
 
-    /* ---- Breadcrumb ---- */
-        .breadcrumb {
-            margin-top: 38px;
-            text-align: left;
-            border-radius: 12px;
-            padding: 15px 10px;
-            font-size: 0.9rem;
-            color: var(--primary-color);
-            background-color: #eaf3f9; /* Match previous style */
-            margin-bottom: 40px;
-        }
+/* ---- Breadcrumb ---- */
+.breadcrumb {
+  margin-top: 38px;
+  text-align: left;
+  border-radius: 12px;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  background-color: #eaf3f9;
+  /* Match previous style */
+  margin-bottom: 40px;
+}
 
-        .breadcrumb a {
-            color: var(--link-color);
-            text-decoration: none;
-        }
-        
-        .breadcrumb span {
-            margin: 0 8px;
-        }
+.breadcrumb a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  margin: 0 8px;
+}
 
 /* ===== HERO (PARALLAX) ===== */
 .hero {
