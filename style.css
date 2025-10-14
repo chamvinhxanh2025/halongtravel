@@ -232,6 +232,40 @@ a {
   margin: 0 10px 15px;
 }
 
+/* media */
+
+        .social-links {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .social-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .social-links svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .facebook { background-color: #3b5998; }
+        .tiktok { background-color: #0000; }
+        .twitter { background-color: #1da1f2; }
+        .youtube { background-color: #ff0000; }
+        .pinterest { background-color: #bd081c; }
+        .instagram { background: #d6249f; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
+        .zalo { background-color: #0068ff; }
 
 
 /* ===== RESPONSIVE ===== */
