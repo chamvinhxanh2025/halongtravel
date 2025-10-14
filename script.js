@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Hàm để mở modal
         function openModal() {
+            closeModalBooking(); // Đóng modal đặt phòng sau khi chọn
             modalOverlay.style.display = "flex";
         }
 
@@ -38,6 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 closeModal();
             }
         });
+
+      const bookingModal = document.getElementById('bookingModal');
+      function closeModalBooking() {
+        bookingModal.classList.remove('active');
+      }
 
         // Tùy chọn: Thêm hành động khi một phương thức được chọn
         const paymentOptions = document.querySelectorAll('.payment-option-item');
